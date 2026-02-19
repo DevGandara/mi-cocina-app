@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 text-center lg:text-left">
         <div className="space-y-4">
           <h2 className="text-primary font-medium tracking-wide uppercase text-sm md:text-base">
@@ -33,8 +33,8 @@ export function Hero() {
           <Button
             asChild
             size={"lg"}
-            variant={"ghost"}
-            className="border border-border px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
+            variant={"outline"}
+            className="border border-border px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/35 active:scale-95"
           >
             <Link href="/menu">Ver Menús y Paquetes</Link>
           </Button>
