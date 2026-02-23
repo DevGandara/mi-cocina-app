@@ -46,12 +46,12 @@ export function ExperienceCard({
         >
           {logo}
         </div>
-        <CardTitle className="text-[1.15rem] font-semibold tracking-tight text-foreground/90 mb-1">
+        <CardTitle className="text-lg font-semibold tracking-tight leading-relaxed text-balance text-foreground/90 line-clamp-3 min-h-12">
           {title}
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="p-0 mt-3 relative z-10">
+      <CardContent className="p-0  relative z-10">
         <CardDescription className="text-muted-foreground/80 text-sm leading-relaxed">
           {description}
         </CardDescription>

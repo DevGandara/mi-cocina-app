@@ -4,7 +4,7 @@ import { ExperienceCard } from "./experience-card";
 const cards = [
   {
     logo: <Calendar className="w-7 h-7 text-primary" />,
-    title: "Experiencia desde 2006",
+    title: "Experiencia profesional desde 2006",
     description:
       "Una trayectoria sólida brindando calidad y confianza en cada evento.",
   },
@@ -16,7 +16,7 @@ const cards = [
   },
   {
     logo: <UtensilsCrossed className="w-7 h-7 text-primary" />,
-    title: "Menús Internacionales",
+    title: "Menús Internacionales y Mexicanos",
     description:
       "Variedad gastronómica que va desde la cocina mexicana tradicional hasta platillos mundiales.",
   },
