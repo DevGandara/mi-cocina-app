@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Instagram } from "lucide-react";
 
 export function Hero() {
   return (
@@ -42,8 +43,12 @@ export function Hero() {
 
         <div className="pt-4 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500" />
-            <span>Ingredientes Frescos</span>
+            <a
+              href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
+              className="p-2 rounded-full bg-primary/5 border border-primary/20 cursor-pointer hover:bg-primary/20 hover:scale-110 transition-all"
+            >
+              <Instagram className="text-primary shrink-0" size={20} />
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500" />
