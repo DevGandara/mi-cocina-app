@@ -11,7 +11,7 @@ import { Button } from "../../ui/button";
 
 const MenuEspecial = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="flex flex-col  gap-3 mb-8">
         <div className="flex items-center gap-3 mb-8">
           <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
@@ -28,7 +28,7 @@ const MenuEspecial = () => {
         </div>
 
         <Card
-          className="w-full relative overflow-hidden
+          className="w-full h-full relative overflow-hidden
         bg-background border border-border/40
         p-8 rounded-3xl
         shadow-sm hover:shadow-xl hover:shadow-primary/8
@@ -62,7 +62,7 @@ const MenuEspecial = () => {
               variant="outline"
               className="w-full mt-1 rounded-xl cursor-pointer"
             >
-              Solicitar menú de platillos
+              Solicitar menú de platillos especiales
             </Button>
           </CardFooter>
         </Card>
@@ -104,12 +104,14 @@ const MenuEspecial = () => {
           </CardHeader>
           <CardContent className="relative z-10">
             <ul className="text-muted-foreground space-y-1">
-              {[1, 2].map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <Check className="text-primary shrink-0" size={16} />
-                  {item === 1 ? "Plato Fuerte" : "Acompañamiento"}
-                </li>
-              ))}
+              {["Buffet (3 guisados)", "Fruta o jugo", "Pan Dulce", "Café"].map(
+                (item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <Check className="text-primary shrink-0" size={16} />
+                    {item}
+                  </li>
+                ),
+              )}
             </ul>
           </CardContent>
           <CardFooter className="flex flex-col items-center justify-center gap-3 relative z-10">
