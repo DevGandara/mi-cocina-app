@@ -4,8 +4,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { Button } from "../ui/button";
+} from "../../ui/card";
+import { Button } from "../../ui/button";
 import { Check, Heart } from "lucide-react";
 
 const platillos = [
@@ -96,7 +96,7 @@ const platillo = () => {
               variant="outline"
               className="w-full mt-1 rounded-xl cursor-pointer"
             >
-              Solicitar información
+              Solicitar menú de platillos
             </Button>
           </CardFooter>
         </Card>

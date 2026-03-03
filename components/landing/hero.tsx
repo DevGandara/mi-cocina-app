@@ -12,13 +12,14 @@ export function Hero() {
             Experiencias Gastronómicas Inolvidables
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
-            Banquetes y <span className="text-primary">comida casera</span> para
-            momentos especiales
+            Banquetes y <span className="text-primary">sabor tradicional</span>{" "}
+            para momentos especiales
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Creamos experiencias gastronómicas únicas para bodas, eventos
-            empresariales y celebraciones familiares. Calidad, sabor y
-            presentación que superan expectativas.
+            En <span className="font-bold">Mi Cocina</span>, creamos
+            experiencias gastronómicas únicas para bodas, eventos empresariales
+            y celebraciones familiares. Calidad, sabor y presentación que
+            superan expectativas.
           </p>
         </div>
 
@@ -45,9 +46,11 @@ export function Hero() {
           <div className="flex items-center gap-2">
             <a
               href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
-              className="p-2 rounded-full bg-primary/5 border border-primary/20 cursor-pointer hover:bg-primary/20 hover:scale-110 transition-all"
+              className="p-2 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] cursor-pointer hover:brightness-125 hover:scale-110 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Instagram className="text-primary shrink-0" size={20} />
+              <Instagram className="text-white shrink-0" size={20} />
             </a>
           </div>
           <div className="flex items-center gap-2">

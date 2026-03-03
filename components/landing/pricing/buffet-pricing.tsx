@@ -4,14 +4,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
-import { Button } from "../ui/button";
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 const buffets = [
   {
     title: "Buffet Internacional",
-    description: ["3 guisados de carne", "2 guisados de NO carne", "Pan"],
+    description: [
+      "3 guisados de carne",
+      "2 guisados de NO carne",
+      "Pan",
+      "Ensalada campestre",
+    ],
     price: "$105.00",
     popular: false,
   },
@@ -20,8 +25,8 @@ const buffets = [
     description: [
       "3 guisados de carne",
       "3 guisados de NO carne",
-      "Ensalada verde",
       "Tortillas",
+      "Ensalada verde",
     ],
     price: "$105.00",
     popular: true,
@@ -30,7 +35,7 @@ const buffets = [
 
 const pricing = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto w-full">
+    <div className="grid md:grid-cols-2 gap-6 max-w-7xl w-full">
       {buffets.map((buffet, index) => (
         <Card
           key={index}
@@ -80,7 +85,7 @@ const pricing = () => {
               variant="outline"
               className="w-full mt-1 rounded-xl cursor-pointer"
             >
-              Solicitar información
+              Solicitar menú completo
             </Button>
           </CardFooter>
         </Card>

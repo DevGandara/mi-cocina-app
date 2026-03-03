@@ -1,6 +1,7 @@
 import BuffetPricing from "./buffet-pricing";
 import PlatilloPricing from "./platillo-pricing";
-import { UtensilsCrossed, ChefHat } from "lucide-react";
+import MenuEspecial from "./menue-pricing";
+import { UtensilsCrossed, ChefHat, ChevronRight } from "lucide-react";
 
 const pricing = () => {
   return (
@@ -40,7 +41,7 @@ const pricing = () => {
           <div className="h-px bg-border/40" />
 
           {/* Buffet */}
-          <div>
+          <div className="w-full">
             <div className="flex items-center gap-3 mb-8">
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
                 <ChefHat size={20} />
@@ -55,6 +56,37 @@ const pricing = () => {
               </div>
             </div>
             <BuffetPricing />
+          </div>
+
+          <div className="h-px bg-border/40" />
+
+          <div className="flex">
+            <div>
+              <MenuEspecial />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-foreground leading-tight">
+              A considerar
+            </h3>
+            <ul className="my-4 flex flex-col gap-4 text-muted-foreground text-sm">
+              <li className="flex">
+                <ChevronRight size={20} />
+                Los costos antes mencionados son para un mínimo de 50 personas,
+                con una cantidad inferior de comensales, los costos aumentan a
+                razón de $10.00 por persona.
+              </li>
+              <li className="flex">
+                <ChevronRight size={20} />
+                Se requiere del 50% de anticipo para contratar y el resto el día
+                del evento.
+              </li>
+              <li className="flex">
+                <ChevronRight size={20} />
+                Las cremas tienen costo de $25.00
+              </li>
+            </ul>
           </div>
         </div>
       </div>

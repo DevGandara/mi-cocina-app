@@ -1,7 +1,7 @@
 import { Hero } from "@/components/landing/hero";
-import { ExperienceSection } from "@/components/landing/experience-section";
+import { ExperienceSection } from "@/components/landing/experience/experience-section";
 import { Mision } from "@/components/landing/mision";
-import Pricing from "@/components/landing/pricing";
+import Pricing from "@/components/landing/pricing/pricing";
 
 export default function Home() {
   return (

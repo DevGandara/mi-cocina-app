@@ -15,7 +15,9 @@ export const Mision = () => {
           {/* Texto */}
           <div className="space-y-12">
             <article className="space-y-2">
-              <h2 className="text-4xl font-bold text-primary">Misión</h2>
+              <h2 className="text-4xl font-bold text-primary underline underline-offset-8">
+                Misión
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Somos una empresa de respuesta sensible y rápida, dedicada a la
                 elaboración de platillos gastronómicos que por nuestros valores:
@@ -26,8 +28,9 @@ export const Mision = () => {
             </article>
 
             <article className="space-y-2">
-              <h2 className="text-4xl font-bold text-primary">Visión</h2>
-              <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-primary/30 rounded-full" />
+              <h2 className="text-4xl font-bold text-primary underline underline-offset-8">
+                Visión
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Ser una empresa líder en la rama de banquetes, reconocida por la
                 calidad de nuestros platillos, el servicio de excelencia y la
@@ -37,7 +40,7 @@ export const Mision = () => {
           </div>
 
           {/* Carrusel */}
-          <Carousel className="w-full max-w-xl justify-self-center">
+          <Carousel className="w-full max-w-xl justify-self-center rounded-xl">
             <CarouselContent>
               {[1, 2, 3].map((i) => (
                 <CarouselItem key={i} className="basis-full">
@@ -46,7 +49,7 @@ export const Mision = () => {
                       src="/Imagen_Buffet-1.webp"
                       alt="Servicio de catering"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-xl"
                       priority={i === 1}
                     />
                   </div>
