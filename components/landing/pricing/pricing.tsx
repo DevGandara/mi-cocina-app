@@ -1,6 +1,7 @@
 import BuffetPricing from "./buffet-pricing";
 import PlatilloPricing from "./platillo-pricing";
 import MenuEspecial from "./menue-pricing";
+import KidsMenuAddOn from "./kids-addon";
 import { UtensilsCrossed, ChefHat, ChevronRight } from "lucide-react";
 
 const pricing = () => {
@@ -9,12 +10,22 @@ const pricing = () => {
       <div className="max-w-7xl mx-auto">
         {/* Encabezado principal */}
         <div className="text-center mb-16">
+          {/* Eyebrow label */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+            Servicios profesionales
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
-            Precios
+            <span className="text-primary relative inline-block">
+              Paquetes
+              {/* Underline accent */}
+              <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-primary/30 rounded-full" />
+            </span>{" "}
+            para tu evento
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Descubre nuestros planes y encuentra el perfecto para tus
-            necesidades.
+            Selecciona la modalidad y después elige el menú que mejor se adapte
+            a tu celebración.
           </p>
         </div>
 
@@ -65,6 +76,11 @@ const pricing = () => {
               <MenuEspecial />
             </div>
           </div>
+          <div className="-mt-8">
+            <KidsMenuAddOn />
+          </div>
+
+          <div className="h-px bg-border/40" />
 
           <div>
             <h3 className="text-xl font-bold text-foreground leading-tight">

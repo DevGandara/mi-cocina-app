@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Carousel,
   CarouselContent,
@@ -5,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 export const Mision = () => {
@@ -40,7 +43,14 @@ export const Mision = () => {
           </div>
 
           {/* Carrusel */}
-          <Carousel className="w-full max-w-xl justify-self-center rounded-xl">
+          <Carousel
+            className="w-full max-w-xl justify-self-center rounded-xl"
+            plugins={[
+              Autoplay({
+                delay: 5000,
+              }),
+            ]}
+          >
             <CarouselContent>
               {[1, 2, 3].map((i) => (
                 <CarouselItem key={i} className="basis-full">

@@ -6,16 +6,16 @@ import {
   CardContent,
   CardFooter,
 } from "../../ui/card";
-import { ChefHat } from "lucide-react";
+import { Egg, CirclePlus } from "lucide-react";
 import { Button } from "../../ui/button";
 
 const MenuEspecial = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div className="flex flex-col  gap-3 mb-8">
+      <div className="flex flex-col mb-8">
         <div className="flex items-center gap-3 mb-8">
           <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
-            <ChefHat size={20} />
+            <CirclePlus size={20} />
           </span>
           <div>
             <h3 className="text-xl font-bold text-foreground leading-tight">
@@ -70,10 +70,10 @@ const MenuEspecial = () => {
 
       {/* Seccion de desayunos*/}
 
-      <div className="flex flex-col items-center gap-3 mb-8">
+      <div className="flex flex-col items-center mb-8">
         <div className="flex items-center gap-3 mb-8">
           <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
-            <ChefHat size={20} />
+            <Egg size={20} />
           </span>
           <div>
             <h3 className="text-xl font-bold text-foreground leading-tight">
