@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Heart } from "lucide-react";
 
 const buffets = [
   {
@@ -35,16 +35,21 @@ const buffets = [
 
 const pricing = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-6 max-w-7xl w-full">
+    <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-7xl w-full">
       {buffets.map((buffet, index) => (
         <Card
           key={index}
-          className="relative overflow-hidden
-        bg-background border border-border/40
+          className={`relative overflow-hidden
+        bg-background
         p-8 rounded-3xl
         shadow-sm hover:shadow-xl hover:shadow-primary/8
         transition-all duration-500 group text-center
-        hover:-translate-y-2 flex flex-col justify-between gap-4 py-12"
+        hover:-translate-y-2 flex flex-col justify-between gap-4 py-12
+        ${
+          buffet.popular
+            ? "border-2 border-primary/40 ring-4 ring-primary/10 bg-primary/2"
+            : "border border-border/40"
+        }`}
         >
           {/* Línea decorativa superior */}
           <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
@@ -54,7 +59,8 @@ const pricing = () => {
 
           {/* Badge popular */}
           {buffet.popular && (
-            <span className="absolute top-4 right-4 bg-primary/5 border border-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full z-20 uppercase">
+            <span className="flex items-center gap-2 absolute top-4 right-4 bg-primary/10 border border-primary/30 text-primary text-xs font-semibold px-3 py-1 rounded-full z-20 ">
+              <Heart className="shrink-0" size={12} />
               Más popular
             </span>
           )}
@@ -82,7 +88,7 @@ const pricing = () => {
               <span className="text-xs text-muted-foreground">por persona</span>
             </div>
             <Button
-              variant="outline"
+              variant={buffet.popular ? "default" : "outline"}
               className="w-full mt-1 rounded-xl cursor-pointer"
             >
               Solicitar menú completo

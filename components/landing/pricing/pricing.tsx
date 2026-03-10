@@ -2,7 +2,7 @@ import BuffetPricing from "./buffet-pricing";
 import PlatilloPricing from "./platillo-pricing";
 import MenuEspecial from "./menue-pricing";
 import KidsMenuAddOn from "./kids-addon";
-import { UtensilsCrossed, ChefHat, ChevronRight } from "lucide-react";
+import { UtensilsCrossed, ChefHat, CirclePlus, Egg, Info } from "lucide-react";
 
 const pricing = () => {
   return (
@@ -71,38 +71,83 @@ const pricing = () => {
 
           <div className="h-px bg-border/40" />
 
-          <div className="flex">
+          {/* Servicio Extra y Desayunos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Servicio Extra */}
             <div>
-              <MenuEspecial />
+              <div className="flex items-center gap-3 mb-8">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
+                  <CirclePlus size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground leading-tight">
+                    Servicio Extra
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Recomendado para baby shower, despedida de soltera, canasta,
+                    etc.
+                  </p>
+                </div>
+              </div>
+              <MenuEspecial type="especial" />
+            </div>
+
+            {/* Desayunos */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
+                  <Egg size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground leading-tight">
+                    Desayunos
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Porque la mejor forma de empezar el día es con el corazón
+                    contento y la panza llena.
+                  </p>
+                </div>
+              </div>
+              <MenuEspecial type="desayuno" />
             </div>
           </div>
-          <div className="-mt-8">
+
+          <div className="h-px bg-border/40" />
+
+          <div>
             <KidsMenuAddOn />
           </div>
 
           <div className="h-px bg-border/40" />
 
           <div>
-            <h3 className="text-xl font-bold text-foreground leading-tight">
-              A considerar
-            </h3>
-            <ul className="my-4 flex flex-col gap-4 text-muted-foreground text-sm">
-              <li className="flex">
-                <ChevronRight size={20} />
-                Los costos antes mencionados son para un mínimo de 50 personas,
-                con una cantidad inferior de comensales, los costos aumentan a
-                razón de $10.00 por persona.
-              </li>
-              <li className="flex">
-                <ChevronRight size={20} />
-                Se requiere del 50% de anticipo para contratar y el resto el día
-                del evento.
-              </li>
-              <li className="flex">
-                <ChevronRight size={20} />
-                Las cremas tienen costo de $25.00
-              </li>
-            </ul>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-600 shrink-0">
+                <Info size={20} />
+              </span>
+              <h3 className="text-xl font-bold text-foreground leading-tight">
+                A considerar
+              </h3>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
+              <ul className="flex flex-col gap-3 text-sm text-amber-900/80">
+                <li className="flex gap-2">
+                  <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                  Los costos antes mencionados son para un mínimo de 50
+                  personas, con una cantidad inferior de comensales, los costos
+                  aumentan a razón de $10.00 por persona.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                  Se requiere del 50% de anticipo para contratar y el resto el
+                  día del evento.
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                  Las cremas tienen costo de $25.00
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

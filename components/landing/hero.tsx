@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Instagram } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
+import { WhatsAppIcon } from "../icons/WhatsappIcon";
 
 export function Hero() {
   return (
@@ -43,19 +44,31 @@ export function Hero() {
         </div>
 
         <div className="pt-4 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
-              className="p-2 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] cursor-pointer hover:brightness-125 hover:scale-110 transition-all"
+              className="p-2 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] cursor-pointer hover:brightness-125 hover:scale-110 transition-all "
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram className="text-white shrink-0" size={20} />
             </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500" />
-            <span>Servicio Premium</span>
+            <a
+              href="https://wa.me/524491942472"
+              className="p-2 rounded-full bg-linear-to-br from-[#25D366] via-[#31ca69] to-[#42a365] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon className="text-white shrink-0" size={20} />
+            </a>
+            <a
+              href="tel:+524491942472"
+              className="p-2 rounded-full bg-linear-to-br from-[#2898ee] via-[#107acc] to-[#0cbccc] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Phone className="text-white shrink-0" size={20} />
+            </a>
           </div>
         </div>
       </div>
