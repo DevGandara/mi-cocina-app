@@ -2,6 +2,7 @@ import { Hero } from "@/components/landing/hero";
 import { ExperienceSection } from "@/components/landing/experience/experience-section";
 import { Mision } from "@/components/landing/mision";
 import Pricing from "@/components/landing/pricing/pricing";
+import { QASection } from "@/components/landing/qa-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <ExperienceSection />
       <Mision />
       <Pricing />
+      <QASection />
     </main>
   );
 }
