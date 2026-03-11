@@ -149,6 +149,7 @@ const pricing = () => {
               </ul>
             </div>
           </div>
+          <div className="h-px bg-border/40" />
         </div>
       </div>
     </section>

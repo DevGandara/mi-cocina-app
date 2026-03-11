@@ -49,7 +49,7 @@ const items = [
 
 export const QASection = () => {
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
+    <section className="w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8 md:pb-16 pb-8">
       {/* Header */}
       <div className="text-center mb-12 md:mb-16 space-y-4">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wide">
