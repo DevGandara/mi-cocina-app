@@ -6,9 +6,19 @@ import { WhatsAppIcon } from "../icons/WhatsappIcon";
 
 export function Hero() {
   return (
-    <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 text-center lg:text-left">
         <div className="space-y-4">
+          <div className="flex justify-center lg:justify-start">
+            <Image
+              src="/mi-cocina-logo.png"
+              alt="Mi Cocina Logo"
+              width={150}
+              height={150}
+              className="object-contain drop-shadow-md"
+              priority
+            />
+          </div>
           <h2 className="text-primary font-medium tracking-wide uppercase text-sm md:text-base">
             Experiencias Gastronómicas Inolvidables
           </h2>
