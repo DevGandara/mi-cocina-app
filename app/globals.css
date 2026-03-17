@@ -1,8 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "tailwind-animations";
 
 @custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --card: oklch(1 0 0);
@@ -174,4 +179,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Hide scrollbar for horizontal scroll nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

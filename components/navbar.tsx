@@ -7,15 +7,14 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/menu", label: "Menú" },
-  { href: "/cotizar", label: "Cotizar" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-4 left-0 right-0 z-50 flex justify-end md:top-12 md:justify-center px-2">
+    <div className="fixed top-4 left-0 right-0 z-50 flex justify-end md:top-8 md:justify-center px-2">
       <div className="relative">
         {/* Pill navbar */}
         <nav className="flex items-center justify-between gap-4 md:px-8 md:py-4 rounded-full border border-white/20 bg-white/15 backdrop-blur-md shadow-lg shadow-black/10">

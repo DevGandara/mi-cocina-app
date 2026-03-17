@@ -14,7 +14,7 @@ import { Button } from "../ui/button";
 export const Footer = () => {
   return (
     <footer className="w-full">
-      <div className="relative w-full">
+      <div className="relative w-full" id="contact">
         <div className="absolute -inset-8 bg-linear-to-b from-amber-100/30 via-transparent to-amber-100/20 rounded-[2rem] blur-3xl -z-10" />
 
         <div className="relative bg-card/70 backdrop-blur-sm border border-y-0 border-r-amber-200/40 border-l-amber-200/40 rounded-2xl overflow-hidden shadow-xl">
@@ -157,7 +157,7 @@ export const Footer = () => {
                 </h3>
                 <div className="bg-muted/30 rounded-lg px-3 py-2.5 border border-amber-100/40">
                   <p className="text-sm text-muted-foreground">
-                    Lun – Sáb · 9:00 – 18:00
+                    Lun – Vie · 9:00 – 15:00
                   </p>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export const Footer = () => {
           </div>
 
           {/* Bottom decorative gold line */}
-          <div className="h-1 bg-linear-to-r from-transparent via-amber-400/80 to-transparent" />
+          <div className="h-1 bg-linear-to-r from-transparent via-primary/80 to-transparent" />
         </div>
       </div>
     </footer>
