@@ -17,11 +17,6 @@ export default function MenuPage() {
         onCategoryChange={setActiveCategory}
       />
       <MenuGrid activeCategory={activeCategory} />
-      <div className="w-full max-w-xs mx-auto flex items-center gap-4 py-2">
-        <span className="flex-1 h-px bg-linear-to-r from-transparent to-border" />
-        <span className="text-border text-xs">✦</span>
-        <span className="flex-1 h-px bg-linear-to-l from-transparent to-border" />
-      </div>
       <Footer />
     </main>
   );
