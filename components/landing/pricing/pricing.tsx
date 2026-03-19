@@ -6,7 +6,7 @@ import { UtensilsCrossed, ChefHat, CirclePlus, Egg, Info } from "lucide-react";
 
 const pricing = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8" id="paquetes">
       <div className="max-w-7xl mx-auto">
         {/* Encabezado principal */}
         <div className="text-center mb-16">

@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export const Mision = () => {
   return (
-    <section className="py-12">
+    <section className="py-12" id="mision">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-24 md:grid-cols-2">
           {/* Texto */}
@@ -56,7 +56,7 @@ export const Mision = () => {
                 <CarouselItem key={i} className="basis-full">
                   <div className="relative w-full aspect-6/5">
                     <Image
-                      src="/Imagen_Buffet-1.webp"
+                      src={`/carrousel-${i}.webp`}
                       alt="Servicio de catering"
                       fill
                       className="object-cover rounded-xl"

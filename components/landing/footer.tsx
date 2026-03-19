@@ -134,16 +134,34 @@ export const Footer = () => {
                 </h3>
                 <nav className="flex flex-col gap-1.5">
                   <Link
-                    href="/cotizar"
+                    href="/#historia"
                     className="text-sm text-muted-foreground hover:text-foreground hover:translate-x-0.5 transition-all"
                   >
-                    Cotizar Evento
+                    Historia
+                  </Link>
+                  <Link
+                    href="/#mision"
+                    className="text-sm text-muted-foreground hover:text-foreground hover:translate-x-0.5 transition-all"
+                  >
+                    Misión y Visión
+                  </Link>
+                  <Link
+                    href="/#paquetes"
+                    className="text-sm text-muted-foreground hover:text-foreground hover:translate-x-0.5 transition-all"
+                  >
+                    Paquetes
                   </Link>
                   <Link
                     href="/menu"
                     className="text-sm text-muted-foreground hover:text-foreground hover:translate-x-0.5 transition-all"
                   >
-                    Menús y Paquetes
+                    Menús y Platillos
+                  </Link>
+                  <Link
+                    href="/#faqs"
+                    className="text-sm text-muted-foreground hover:text-foreground hover:translate-x-0.5 transition-all"
+                  >
+                    Preguntas Frecuentes
                   </Link>
                 </nav>
               </div>

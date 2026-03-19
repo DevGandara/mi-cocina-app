@@ -24,7 +24,7 @@ const cards = [
 
 export function ExperienceSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden" id="historia">
       {/* Top divider line */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
