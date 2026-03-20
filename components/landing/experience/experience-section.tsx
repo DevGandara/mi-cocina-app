@@ -32,11 +32,11 @@ export function ExperienceSection() {
       <div className="absolute -left-[15%] top-[10%] w-[35%] h-[60%] bg-primary/4 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute -right-[10%] bottom-[10%] w-[25%] h-[40%] bg-primary/3 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 ">
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center mb-16 space-y-5">
           {/* Eyebrow label */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase timeline-view animate-fade-in animate-range-brisk">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Nuestra historia
           </div>

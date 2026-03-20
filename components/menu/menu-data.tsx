@@ -10,6 +10,7 @@ import {
 export interface Dish {
   name: string;
   description: string;
+  image?: string;
 }
 
 export interface MenuSection {

@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/menu", label: "Menú" },
-  { href: "#contact", label: "Contacto" },
 ];
 
 export const Navbar = () => {
@@ -69,7 +68,7 @@ export const Navbar = () => {
 
         {/* Mobile dropdown */}
         <div
-          className={`md:hidden absolute top-full right-0 mt-2 w-48 rounded-2xl border border-white/20 bg-white/15 backdrop-blur-md shadow-lg shadow-black/10 overflow-hidden transition-all duration-300 ${
+          className={`md:hidden absolute top-full right-0 mt-2 w-48 rounded-2xl border border-white/20 bg-white/85 backdrop-blur-md shadow-lg shadow-black/10 overflow-hidden transition-all duration-300 ${
             open
               ? "opacity-100 scale-100 translate-y-0"
               : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -112,4 +111,3 @@ export const Navbar = () => {
     </div>
   );
 };
-

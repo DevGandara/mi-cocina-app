@@ -2,6 +2,7 @@
 
 import { menuCategories, Dish } from "./menu-data";
 import { useRef } from "react";
+import Image from "next/image";
 
 interface MenuGridProps {
   activeCategory: string;
@@ -10,20 +11,38 @@ interface MenuGridProps {
 function DishCard({ dish }: { dish: Dish; categoryId: string; index: number }) {
   return (
     <div
-      className="group relative rounded-2xl border border-border/50 bg-white/5 backdrop-blur-sm
-                 p-5 md:p-6 transition-all duration-300
+      className={`group relative rounded-2xl border border-border/50 bg-white/5 backdrop-blur-sm
+                 transition-all duration-300 overflow-hidden flex flex-col
                  hover:bg-primary/5 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10
-                 hover:-translate-y-1"
+                 hover:-translate-y-1 ${dish.image ? "h-full" : "p-5 md:p-6"}`}
     >
-      {/* Decorative accent line */}
-      <div
-        className="absolute top-0 left-6 right-6 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent
-                      opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      />
+      {/* Decorative accent line - only show for cards without images or position differently, for now let's keep it but adjust for padding */}
+      {!dish.image && (
+        <div
+          className="absolute top-0 left-6 right-6 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      )}
 
-      <div className="flex items-start gap-3">
+      {/* Image Section */}
+      {dish.image && (
+        <div className="relative w-full aspect-video md:aspect-4/3 overflow-hidden shrink-0">
+          <Image
+            src={dish.image}
+            alt={dish.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+          {/* Subtle gradient overlay to blend image into the card */}
+          <div className="absolute inset-0 bg-linear-to-t from-background/80 to-transparent opacity-60" />
+        </div>
+      )}
+
+      {/* Content Section */}
+      <div className={`flex items-start gap-3 ${dish.image ? "p-5 md:p-6 grow" : ""}`}>
         <div className="mt-1 w-2 h-2 rounded-full bg-primary/60 shrink-0 group-hover:bg-primary group-hover:shadow-[0_0_8px_var(--primary)] transition-all duration-300" />
-        <div>
+        <div className="flex flex-col h-full">
           <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 leading-tight">
             {dish.name}
           </h3>
