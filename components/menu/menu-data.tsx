@@ -11,6 +11,7 @@ export interface Dish {
   name: string;
   description: string;
   image?: string;
+  variants?: string[];
 }
 
 export interface MenuSection {
@@ -36,89 +37,116 @@ export const menuCategories: MenuCategory[] = [
         title: "Carne",
         dishes: [
           {
-            name: "Alambre",
+            name: "Alambre de la Parilla",
             description:
-              "Jugosa combinación de carnes salteadas con pimiento morrón, cebolla y un toque ahumado al estilo norteño.",
+              "Jugosa combinación de carnes y vegetales con un irresistible toque ahumado al estilo norteño; perfecta para enrollar en tortillas recién hechas y compartir en buena compañía.",
+            image: "/menu/mexicano/alambre.webp",
           },
           {
             name: "Discada Norteña",
             description:
-              "Mezcla tradicional de diversos cortes de carne, embutidos y vegetales, sazonados con el auténtico sabor del norte.",
+              "El espíritu del norte en un solo guiso: cortes selectos y embutidos sazonados con la sazón robusta y generosa que solo el campo mexicano puede ofrecer.",
+            image: "/menu/mexicano/discada.webp",
           },
           {
             name: "Bistek a la Mexicana",
             description:
-              "Finas láminas de res cocinadas con tomate, chile y cebolla; también disponible con champiñones o en salsa roja/verde.",
+              "Finas láminas de res cocinadas en su propio jugo, llenas de sabor y color. Elige la versión que más te apetezca para hacer de cada taco algo especial.",
+            variants: ["champiñones", "salsa roja", "salsa verde"],
+            image: "/menu/mexicano/bistekm.webp",
           },
           {
             name: "Chicharrón en Salsa",
             description:
-              "Crujiente chicharrón de cerdo que se suaviza en una cocción lenta dentro de nuestra especial salsa roja o verde.",
+              "Chicharrón de cerdo que se suaviza lentamente en salsa hasta absorber todo el sabor del guiso. Intenso, reconfortante y profundamente mexicano.",
+            variants: ["salsa roja", "salsa verde", "salsa martajada"],
+            image: "/menu/mexicano/chicharronm.webp",
           },
           {
             name: "Carne de Puerco en Chile",
             description:
-              "Trozos de cerdo tiernos, bañados en una selección de chiles pasilla, poblano o en nuestras clásicas salsas de la casa.",
+              "Trozos de cerdo tiernos y jugosos, cocidos a fuego lento hasta que la salsa de chile los envuelve por completo. Un guiso de alma y carácter.",
+            variants: ["chile pasilla", "chile chipotle", "chile rojo"],
+            image: "/menu/mexicano/cerdochile.webp",
           },
           {
             name: "Carne al Pastor",
             description:
-              "Carne de cerdo marinada en un tradicional adobo de achiote y especias, con ese sabor agridulce tan característico.",
+              "Carne de cerdo marinada en nuestro tradicional adobo de achiote y especias secretas, logrando ese equilibrio agridulce que define al clásico taco mexicano.",
+            image: "/menu/mexicano/carnepastor.webp",
           },
           {
             name: "Carne de Cerdo Adobada",
             description:
-              "Cerdo suavemente cocinado en adobo rojo y acompañado de papas, logrando un sabor casero y reconfortante.",
+              "Un abrazo al paladar: cerdo cocido a fuego lento en adobo rojo hasta que cada trozo se satura de sabor. Sencillo, profundo y reconfortante.",
+            image: "/menu/mexicano/carneadobada.webp",
           },
           {
             name: "Costilla de Cerdo con Nopales",
             description:
-              "Jugosas costillas guisadas con tiernos nopales, una combinación clásica que resalta lo mejor de la cocina mexicana.",
+              "Costillas jugosas guisadas con tiernos nopales de la huerta, en una salsa que reúne lo mejor de la cocina de rancho. Un clásico que nunca falla.",
+            variants: ["salsa verde", "salsa roja"],
+            image: "/menu/mexicano/costillacm.webp",
           },
           {
             name: "Carne Deshebrada",
             description:
-              "Carne de res finamente deshebrada, preparada al gusto con rajas de poblano, papas o en una picante salsa chipotle.",
+              "Res finamente deshebrada y sazonada hasta el último hilo. Cada variante le da un carácter distinto; elige la que mejor va con tu ánimo del día.",
+            variants: ["rajas de poblano", "papas", "salsa chipotle"],
+            image: "/menu/mexicano/carnedeshebrada.webp",
           },
           {
-            name: "Lomo en Salsa Verde",
+            name: "Lomo de Cerdo",
             description:
-              "Cortes selectos de lomo de cerdo bañados en una salsa verde de tomatillo fresco y especias seleccionadas.",
+              "Corte selecto de lomo tierno, cocinado al punto exacto y bañado en la salsa que prefieras. Un plato delicado que cambia de carácter con cada elección.",
+            variants: ["salsa verde", "salsa roja", "crema", "adobo"],
+            image: "/menu/mexicano/lomocerdo.webp",
           },
           {
-            name: "Picadillo",
+            name: "Picadillo de Res",
             description:
-              "Carne molida de res guisada con cubitos de zanahoria y papa en una base de tomate con sazón de hogar.",
+              "Carne molida de res guisada con zanahoria, papa y tomate natural. El sabor reconfortante que solo la cocina hecha con amor tiene.",
+            image: "/menu/mexicano/picadillo.webp",
           },
           {
-            name: "Mole con Pollo",
+            name: "Mole a Gusto",
             description:
-              "Piezas de pollo cubiertas en nuestro complejo y artesanal mole poblano; también disponible con cerdo o mole verde.",
+              "La joya de la gastronomía mexicana. El Mole Poblano envuelve con su complejidad dulce y especiada; el Mole Verde sorprende con su frescura aromática. Elige tu favorito.",
+            variants: ["mole poblano", "mole verde"],
+            image: "/menu/mexicano/mole.webp",
           },
           {
             name: "Pollo Deshebrado",
             description:
-              "Pechuga de pollo deshebrada, ideal para quienes buscan algo ligero en salsa verde o en un suave adobo rojo.",
+              "Pollo tierno y deshebrado que se presta a mil sabores. Cada variante lo transforma por completo — ligero cuando lo quier, contundente cuando lo necesitas.",
+            variants: ["salsa verde", "adobo rojo", "crema", "pimiento morrón"],
+            image: "/menu/mexicano/pollodeshebrado.webp",
           },
           {
-            name: "Tinga",
+            name: "Tinga Tradicional",
             description:
-              "Guiso tradicional de pollo o cerdo deshebrado con cebolla y el toque ahumado y picante del chile chipotle.",
+              "Cebolla caramelizada, chipotle ahumado y la proteína de tu elección: una combinación que lleva décadas ganando corazones en la cocina mexicana.",
+            variants: ["pollo", "cerdo", "res"],
+            image: "/menu/mexicano/tinga.webp",
           },
           {
             name: "Salchichas Guisadas",
             description:
-              "Rodajas de salchicha de primera calidad cocinadas en una sencilla pero deliciosa salsa de tomate y cebolla.",
+              "Un guiso clásico y familiar: salchichas doradas en base de tomate y cebolla, con ese sabor casero que gusta a toda la mesa.",
+            image: "/menu/mexicano/salchichas.webp",
           },
           {
             name: "Cochinita Pibil",
             description:
-              "Carne de cerdo desmenuzada marinada en naranja agria y achiote, cocinada lentamente al estilo tradicional yucateco.",
+              "Un viaje directo a Yucatán: cerdo desmenuzado, marinado en naranja agria y achiote, cocido lentamente hasta deshacerse en capas de sabor puro.",
+            image: "/menu/mexicano/cochinita.webp",
           },
           {
             name: "Carne en su Jugo",
             description:
-              "Especialidad de Jalisco consistente en finos cortes de res en su propio caldo, acompañados de frijoles de la olla y tocino.",
+              "Orgullo tapatío: finos cortes de res cocidos en su propio caldo, tocino crujiente y frijoles de la olla. Una sopa contundente que es toda una institución.",
+            variants: ["salsa verde", "salsa roja"],
+            image: "/menu/mexicano/carnejugo.webp",
           },
         ],
       },
@@ -126,34 +154,52 @@ export const menuCategories: MenuCategory[] = [
         title: "Acompañamientos",
         dishes: [
           {
-            name: "Arroz Blanco ó a la Mexicana",
+            name: "Arroz al Gusto de Casa",
             description:
-              "Granos de arroz perfectamente cocidos, ya sea en una versión blanca con verduras o roja con el sazón tradicional de la casa.",
+              "Granos sueltos y perfectamente cocidos, listos para acompañar cualquier guiso. Cada versión tiene su propia personalidad; elige la que mejor maride con tu plato fuerte.",
+            variants: ["blanco", "campesino", "al cilantro"],
+            image: "/menu/mexicano/arroz.webp",
           },
           {
-            name: "Papas con Chorizo",
+            name: "Papas al Estilo de Chef",
             description:
-              "Dados de papa suavemente dorados con chorizo de la región; también puedes pedirlas con jamón o rajas para un sabor más ligero.",
+              "Dados de papa dorados hasta lograr ese exterior crujiente que contrasta con su interior esponjoso. Una guarnición que nunca decepciona, sin importar la versión que elijas.",
+            variants: ["con chorizo", "con jamón", "con crema", "mexicana"],
+            image: "/menu/mexicano/papasm.webp",
           },
           {
-            name: "Rajas con Queso",
+            name: "Rajas Poblanas Artesanales",
             description:
-              "Tiras de chile poblano asado y combinadas con queso fundido; una opción clásica que también puede servirse con crema ácida.",
+              "Chile poblano tatemado que llena de aroma toda la cocina. Su sabor ligeramente ahumado combina a la perfección con cualquiera de sus ingredientes de acompañamiento.",
+            variants: ["con queso", "con crema", "con elote", "a la mexicana"],
+            image: "/menu/mexicano/rajas.webp",
           },
           {
-            name: "Nopales a la Mexicana",
+            name: "Nopales Tiernos de la Huerta",
             description:
-              "Nopales tiernos salteados con tomate, cebolla y chile; disponibles también con chorizo o guisados en nuestra salsa especial.",
+              "Recién cortados y bien preparados para eliminar cualquier baba. Frescos y versátiles, son el acompañamiento más honesto de la cocina de rancho.",
+            variants: ["en ensalada", "guisados"],
+            image: "/menu/mexicano/nopales.webp",
           },
           {
-            name: "Frijoles Adobados",
+            name: "Frijoles Tradicionales",
             description:
-              "Frijoles de la olla sazonados en adobo; si lo prefieres, pide nuestros frijoles charros, refritos o con un toque de chorizo.",
+              "El alma de la mesa mexicana. Cada versión tiene su momento: caldosos, espesos, refritos o cargados de ingredientes. El frijol siempre encuentra su lugar.",
+            variants: [
+              "de la olla",
+              "charros",
+              "refritos",
+              "con chorizo",
+              "adobados",
+            ],
+            image: "/menu/mexicano/frijoles.webp",
           },
           {
-            name: "Flautas",
+            name: "Flautas Crujientes",
             description:
-              "Tortillas de maíz rellenas y fritas hasta alcanzar una textura perfectamente crujiente; el acompañamiento ideal para cualquier guiso.",
+              "Tortillas de maíz enrolladas y fritas hasta lograr un crujido irresistible. El relleno lo eliges tú; el resultado siempre será el complemento favorito de la mesa.",
+            variants: ["pollo", "res", "requesón", "rajas", "cerdo"],
+            image: "/menu/mexicano/flautas.webp",
           },
         ],
       },
@@ -168,54 +214,84 @@ export const menuCategories: MenuCategory[] = [
         title: "Carnes",
         dishes: [
           {
-            name: "Pollo con Rajas",
+            name: "Pollo",
             description:
-              "Tiras de pollo con rajas poblanas; también disponible en versiones a la crema con champiñones, al pimiento, adobo o barbecue.",
+              "Tiras de pechuga cocinadas con técnica y criterio, adaptadas a cualquier perfil de sabor que desees. Suave o con carácter, siempre jugoso y bien sazonado.",
+            variants: [
+              "rajas",
+              "crema",
+              "champiñones",
+              "pimiento",
+              "chipotle",
+              "mostaza",
+            ],
+            image: "/menu/internacional/pollorajas.webp",
           },
           {
             name: "Pechugas Rellenas",
             description:
-              "Exquisitas pechugas preparadas al estilo Cordon Bleu, poblanas o a los tres quesos, con opción de empanizado crujiente.",
+              "Pechugas jugosas rellenas con ingredientes de primera y selladas para no perder ni una gota de sabor. Un plato que impresiona tanto por su presentación como por su sabor.",
+            variants: [
+              "cordon bleu",
+              "poblanas",
+              "tres quesos",
+              "empanizado",
+              "champiñon y tocino",
+            ],
+            image: "/menu/internacional/pechugas.webp",
           },
           {
-            name: "Lomo en Salsa de Tamarindo",
+            name: "Lomo",
             description:
-              "Corte selecto de lomo bañado en una reducción agridulce de tamarindo; también se ofrece en salsa mignon, adobo o con rajas.",
+              "Corte noble y jugoso que acepta con elegancia cada salsa que le ofrecemos. Desde sabores agridulces hasta especiados — cada variante revela una personalidad distinta.",
+            variants: [
+              "tamarindo",
+              "ciruela",
+              "poblano",
+              "mignon",
+              "champiñones",
+              "adobo",
+              "salsa verde",
+            ],
+            image: "/menu/internacional/lomo.webp",
           },
           {
             name: "Costillas a la Barbecue",
             description:
-              "Costillas de cerdo tiernas y jugosas, glaseadas lentamente con nuestra salsa BBQ ahumada de la casa.",
+              "Costillas de cerdo cocidas hasta el punto donde la carne casi se separa sola del hueso, bañadas en nuestra salsa BBQ ahumada de la casa. Para los fanáticos del sabor intenso.",
+            image: "/menu/internacional/costillas.webp",
           },
           {
-            name: "Lasagna de Res",
+            name: "Lasagna",
             description:
-              "Capas de pasta artesanal intercaladas con boloñesa de res sazonada y una generosa mezcla de quesos fundidos.",
+              "Capas de pasta artesanal que abrazan una generosa boloñesa y una mezcla de quesos que se funden al horno. Reconfortante y saciante en cada porción.",
+            variants: ["res", "verduras", "espinacas y champiñones"],
+            image: "/menu/internacional/lasagna.webp",
           },
           {
-            name: "Alambre de Bistek",
+            name: "Alambre",
             description:
-              "Bistec de res salteado con pimientos coloridos y cebolla, coronado con una capa de queso fundido de excelente calidad.",
+              "Proteína salteada a fuego vivo con pimientos coloridos, tocino y cebolla. Un plato vibrante que combina texturas y sabores en cada forkful.",
+            variants: ["bistek", "pollo"],
+            image: "/menu/internacional/alambrebistek.webp",
           },
           {
             name: "Pastel Azteca",
             description:
-              "Tradicional combinación de capas de tortilla, pollo deshebrado, salsa verde o roja, crema y queso gratinado al horno.",
+              "Una lasagna mexicana: capas de tortilla con pollo deshebrado, salsa y queso gratinado al horno. Crujiente por fuera, jugoso y fundido por dentro.",
+            image: "/menu/internacional/pastelazteca.webp",
           },
           {
             name: "Nuggets de Pollo",
             description:
-              "Pequeños bocados de pechuga de pollo empanizados y fritos hasta obtener una textura dorada y crujiente.",
-          },
-          {
-            name: "Pollo a la Mostaza",
-            description:
-              "Tiernas piezas de pollo bañadas en una salsa aterciopelada a base de mostaza fina y especias seleccionadas.",
+              "Bocados de pechuga pura con un empanizado dorado y crujiente que los convierte en el favorito irresistible de la mesa — a cualquier edad.",
+            image: "/menu/internacional/nuggets.webp",
           },
           {
             name: "Cerdo al Chile Ancho",
             description:
-              "Carne de cerdo de cocción lenta sumergida en una salsa de chile ancho de sabor profundo, dulce y ligeramente ahumado.",
+              "Cerdo de cocción lenta sumergido en una salsa de chile ancho con notas dulces, ahumadas y una calidez que se siente desde el primer bocado.",
+            image: "/menu/internacional/cerdoancho.webp",
           },
         ],
       },
@@ -225,27 +301,72 @@ export const menuCategories: MenuCategory[] = [
           {
             name: "Spaguetti",
             description:
-              "Pasta larga en salsa a elegir: poblana, chipotle, morrón, cilantro, tres quesos o nuestra cremosa receta campesina.",
+              "Pasta larga cocinada al dente y transformada con la salsa que elijas. La versatilidad de nuestra cocina en un solo plato reconfortante.",
+            variants: [
+              "poblano",
+              "chipotle",
+              "morrón",
+              "cilantro",
+              "tres quesos",
+              "campesina",
+              "hawaiano",
+              "a la crema",
+              "a la italiana",
+            ],
+            image: "/menu/internacional/spaguettii.webp",
           },
           {
-            name: "Tallarines con Crema",
+            name: "Tallarines",
             description:
-              "Cintas de pasta suave bañadas en una delicada base láctea; podemos prepararlos al gusto con su ingrediente favorito.",
+              "Cintas de pasta de textura sedosa que retienen la salsa en cada vuelta. Un acompañamiento elegante que se adapta a todos los gustos.",
+            variants: [
+              "poblano",
+              "chipotle",
+              "morrón",
+              "cilantro",
+              "tres quesos",
+              "campesina",
+              "hawaiano",
+              "a la crema",
+              "a la italiana",
+            ],
+            image: "/menu/internacional/tallarines.webp",
           },
           {
-            name: "Tornillos con Pimiento",
+            name: "Tornillos",
             description:
-              "Pasta corta tipo rotini salteada con una vibrante salsa de pimientos; opción de personalizarlos con su sazón preferido.",
+              "Pasta corta en espiral que atrapa la salsa en cada rizo, garantizando sabor en cada bocado. Perfecta para quienes disfrutan las texturas contrastantes.",
+            variants: [
+              "poblano",
+              "chipotle",
+              "morrón",
+              "cilantro",
+              "tres quesos",
+              "campesina",
+              "hawaiano",
+              "a la crema",
+              "a la italiana",
+            ],
+            image: "/menu/internacional/tornillos.webp",
           },
           {
-            name: "Papas con Crema",
+            name: "Papas",
             description:
-              "Rebanadas de papa cocidas a la perfección, servidas con crema o disponibles al gratín, a la mantequilla o al limón.",
+              "Papa perfectamente cocida, lista para tomar la forma que prefieras. Un acompañamiento clásico con opciones que van de lo rústico a lo elegante.",
+            variants: ["con crema", "al gratín", "al ajillo", "en puré"],
+            image: "/menu/internacional/papas.webp",
           },
           {
             name: "Crepas",
             description:
-              "Delgadas y suaves crepas rellenas de rajas con elote, champiñones frescos, espinacas o una mezcla de tres quesos.",
+              "Láminas finas y suaves que envuelven rellenos llenos de sabor. Un acompañamiento sofisticado que eleva cualquier plato fuerte.",
+            variants: [
+              "rajas con elote",
+              "champiñones",
+              "espinacas",
+              "tres quesos",
+            ],
+            image: "/menu/internacional/crepas.webp",
           },
         ],
       },
@@ -262,12 +383,43 @@ export const menuCategories: MenuCategory[] = [
           {
             name: "Lomo",
             description:
-              "En salsa de champiñones, crema de poblano, adobo, con rajas y elote, salsa de tamarindo, relleno, salsa agridulce, salsa de ciruela pasa ó salsa de cacahuate y nuez",
+              "Corte noble de cerdo seleccionado por su jugosidad y terneza. Lo preparamos con la sazón de la casa y lo vestimos con la salsa que más te inspire",
+            variants: [
+              "adobo",
+              "mignon",
+              "campesino",
+              "poblano",
+              "al chipotle",
+              "crema de champiñones",
+              "cacahuate y nuez",
+              "tamarindo",
+              "ciruela",
+              "agridulce",
+            ],
+            image: "/menu/internacional/lomo.webp",
           },
+
           {
             name: "Pechugas de Pollo",
             description:
-              "Con crema de poblano, crema de chipotle, salsa de champiñones, a los tres quesos, rellenas de espinacas, salsa de mango, al chipotle con piña, agridulce ó al tocino en salsa frutal",
+              "Pechuga entera, jugosa y bien sazonada, llevada a su máximo potencial con rellenos y preparaciones que la convierten en el plato fuerte de cualquier celebración.",
+            variants: [
+              "corden bleu",
+              "tres quesos",
+              "champiñones",
+              "espinacas y tocino",
+              "frutal",
+              "poblana",
+              "empanizada",
+            ],
+            image: "/menu/internacional/pechugas.webp",
+          },
+          {
+            name: "Lasagna",
+            description:
+              "El clásico italiano con sello propio: capas de pasta, carne sazonada y generosa mezcla de quesos fundidos al horno hasta lograr esa corteza dorada perfecta.",
+            variants: ["res", "pollo"],
+            image: "/menu/internacional/lasagna.webp",
           },
         ],
       },
@@ -400,6 +552,7 @@ export const menuCategories: MenuCategory[] = [
             name: "Lasagna",
             description:
               "Láminas de pasta intercaladas con una rica salsa boloñesa y bechamel, terminadas con una capa de queso gratinado.",
+            image: "/menu/internacional/lasagna.webp",
           },
           {
             name: "Poblano Hojaldrado",
@@ -491,54 +644,73 @@ export const menuCategories: MenuCategory[] = [
     icon: <Sun size={20} />,
     dishes: [
       {
-        name: "Huevo (con jamón, salchichas, chorizo o a la mexicana)",
+        name: "Huevo al Gusto",
         description:
-          "Huevos preparados al gusto con ingredientes frescos, ideales para un desayuno tradicional y completo.",
+          "La base perfecta de todo buen desayuno, preparada con ingredientes frescos y el cariño de siempre. Elige el acompañamiento que los haga tuyos.",
+        variants: [
+          "con jamón",
+          "con salchichas",
+          "con chorizo",
+          "a la mexicana",
+        ],
+        image: "/menu/desayunos/huevos.webp",
       },
       {
-        name: "Chilaquiles (rojos, verdes o martajados)",
+        name: "Chilaquiles",
         description:
-          "Crujientes totopos bañados en la salsa de tu elección, acompañados de crema, queso y un toque de cebolla.",
+          "Totopos bañados en salsa hasta lograr ese equilibrio entre crujiente y suavizado que los hace tan adictivos. Con crema, queso y cebolla morada por encima.",
+        variants: ["rojos", "verdes", "martajados"],
       },
       {
-        name: "Chicharrón (rojo, verde o molcajete)",
+        name: "Chicharrón en Salsa",
         description:
-          "Suave chicharrón de cerdo cocinado a fuego lento en salsas tradicionales llenas de sabor y sazón casero.",
+          "Chicharrón de cerdo cocido a fuego lento hasta que la salsa lo impregna por completo. Rústico, sabroso y profundamente casero.",
+        variants: ["rojo", "verde", "molcajete"],
       },
       {
-        name: "Costilla con nopales",
+        name: "Costilla con Nopales",
         description:
-          "Jugosa costilla de cerdo acompañada de tiernos nopales en una salsa especial que resalta su sabor campestre.",
+          "Costilla jugosa y tiernos nopales de la huerta en un guiso que sabe a campo y a cocina de rancho. Un maridaje clásico e irresistible.",
       },
       {
-        name: "Cerdo en salsa (verde, roja o martajada)",
+        name: "Cerdo en Salsa",
         description:
-          "Trozos seleccionados de cerdo bañados en salsas de chiles frescos o martajados para un toque rústico.",
+          "Trozos seleccionados de cerdo cocinados en salsas de chiles auténticos que le aportan carácter y profundidad. A gusto del comensal.",
+        variants: ["verde", "roja", "martajada"],
       },
       {
-        name: "Bistec (a la mexicana, en salsa verde o roja o con champiñones)",
+        name: "Bistec",
         description:
-          "Finas láminas de res cocinadas en su jugo con vegetales frescos o una cremosa salsa de champiñones.",
+          "Finas láminas de res tiernas y bien sazonadas, listas para llenar de sabor el desayuno. Elige la versión que más te apetezca esta mañana.",
+        variants: [
+          "a la mexicana",
+          "en salsa verde",
+          "en salsa roja",
+          "con champiñones",
+        ],
       },
       {
-        name: "Rajas (con queso, crema, elote o papas)",
+        name: "Rajas Poblanas",
         description:
-          "Tiras de chile poblano salteadas y combinadas con ingredientes cremosos y dulces granos de elote.",
+          "Chile poblano tatemado y cortado en tiras suaves, combinado con ingredientes que resaltan su sabor ahumado y ligeramente picante.",
+        variants: ["con queso", "con crema", "con elote", "con papas"],
       },
       {
-        name: "Papas (con jamón, chorizo, crema o a la mexicana)",
+        name: "Papas al Gusto",
         description:
-          "Papas en trozos perfectamente cocidas y salteadas con el ingrediente de tu elección para un sabor reconfortante.",
+          "Papas en trozos bien cocidos y perfectamente sazonados, transformados según el ingrediente que elijas. Un clásico que nunca cansa.",
+        variants: ["con jamón", "con chorizo", "con crema", "a la mexicana"],
       },
       {
         name: "Molletes",
         description:
-          "Pan bolillo tostado con una base de frijoles refritos y queso fundido, servidos con pico de gallo fresco.",
+          "Bolillo tostado con frijoles refritos y queso fundido al punto exacto, coronados con pico de gallo fresco. Un desayuno directo y satisfactorio.",
       },
       {
-        name: "Pollo en salsa verde o con chipotle",
+        name: "Pollo en Salsa",
         description:
-          "Piezas de pollo tiernas bañadas en una vibrante salsa verde o una ahumada y picante salsa de chipotle.",
+          "Piezas de pollo tiernas y jugosas vestidas con una salsa intensa que llena el plato de aroma y color desde la primera cucharada.",
+        variants: ["salsa verde", "chipotle"],
       },
     ],
   },
@@ -549,32 +721,43 @@ export const menuCategories: MenuCategory[] = [
     dishes: [
       {
         name: "Pastel de Tres Leches",
-        description: "Bizcocho húmedo bañado en tres leches",
+        description:
+          "Bizcocho esponjoso bañado lentamente en una mezcla de tres leches hasta que cada migaja queda impregnada. Suave, húmedo y delicadamente dulce.",
       },
       {
         name: "Flan Napolitano",
-        description: "Flan cremoso con caramelo casero",
+        description:
+          "Textura sedosa y perfectamente firme, cubierto por un hilo de caramelo artesanal que se derrite en cada cucharada. Un clásico intemporal.",
       },
-      { name: "Arroz con Leche", description: "Postre tradicional con canela" },
+      {
+        name: "Arroz con Leche",
+        description:
+          "Cremoso, cálido y perfumado con canela. Un postre que viaja directo a la infancia y siempre deja ganas de repetir.",
+      },
       {
         name: "Gelatina Mosaico",
-        description: "Colorida gelatina de múltiples sabores",
+        description:
+          "Vibrante mosaico de gelatinas de colores suspendidas en crema, donde cada rebanada es completamente única y llena de alegría.",
       },
       {
         name: "Churros con Chocolate",
-        description: "Churros espolvoreados con azúcar y canela",
+        description:
+          "Crujientes por fuera, esponjosos por dentro, espolvoreados de azúcar con canela y servidos con chocolate para fundir. El final perfecto.",
       },
       {
         name: "Pay de Queso",
-        description: "Con base de galleta y frutos rojos",
+        description:
+          "Base crujiente de galleta que sostiene un relleno cremoso de queso con el punto justo de dulzor, coronado con frutos rojos frescos.",
       },
       {
         name: "Carlota de Limón",
-        description: "Postre frío con galletas y limón",
+        description:
+          "Postre frío de capas alternas de galletas suavizadas y crema de limón. Refrescante, cítrico y con una presentación que enamora.",
       },
       {
         name: "Fresas con Crema",
-        description: "Fresas frescas con crema batida",
+        description:
+          "Fresas maduras y jugosas bañadas en crema batida. Sencillo, honesto y absolutamente irresistible cuando la fruta está en su punto.",
       },
     ],
   },

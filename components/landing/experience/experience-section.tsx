@@ -1,4 +1,5 @@
 import { Calendar, Users, UtensilsCrossed } from "lucide-react";
+import { Reveal } from "@/components/landing/reveal";
 import { ExperienceCard } from "./experience-card";
 
 const cards = [
@@ -36,30 +37,35 @@ export function ExperienceSection() {
         {/* Header */}
         <div className="max-w-2xl mx-auto text-center mb-16 space-y-5">
           {/* Eyebrow label */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase timeline-view animate-fade-in animate-range-brisk">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Nuestra historia
-          </div>
+          <Reveal delay={40} className="flex justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase timeline-view animate-fade-in animate-range-brisk">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Nuestra historia
+            </div>
+          </Reveal>
 
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
-            Más de{" "}
-            <span className="text-primary relative inline-block">
-              18 años
-              {/* Underline accent */}
-              <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-primary/30 rounded-full" />
-            </span>{" "}
-            creando eventos memorables
-          </h2>
+          <Reveal delay={120}>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15]">
+              Más de{" "}
+              <span className="text-primary relative inline-block">
+                18 años
+                <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-primary/30 rounded-full" />
+              </span>{" "}
+              creando eventos memorables
+            </h2>
+          </Reveal>
 
-          <p className="text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
-            Desde 2006 ofrecemos servicio gastronómico profesional. Comenzamos
-            con eventos de 200 personas y hoy atendemos desde reuniones íntimas
-            hasta grandes banquetes de{" "}
-            <span className="font-semibold text-foreground">
-              1,000 personas
-            </span>
-            .
-          </p>
+          <Reveal delay={200}>
+            <p className="text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Desde 2006 ofrecemos servicio gastronómico profesional. Comenzamos
+              con eventos de 200 personas y hoy atendemos desde reuniones íntimas
+              hasta grandes banquetes de{" "}
+              <span className="font-semibold text-foreground">
+                1,000 personas
+              </span>
+              .
+            </p>
+          </Reveal>
         </div>
 
         {/* Cards */}

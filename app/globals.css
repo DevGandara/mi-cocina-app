@@ -8,6 +8,82 @@ html {
   scroll-behavior: smooth;
 }
 
+.landing-intro {
+  opacity: 0;
+  transform: translate3d(0, 42px, 0);
+  animation: landing-intro-rise 820ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.landing-intro-delay-1 {
+  animation-delay: 120ms;
+}
+
+.landing-intro-delay-2 {
+  animation-delay: 220ms;
+}
+
+.landing-intro-delay-3 {
+  animation-delay: 340ms;
+}
+
+.landing-intro-delay-4 {
+  animation-delay: 460ms;
+}
+
+.landing-intro-delay-5 {
+  animation-delay: 580ms;
+}
+
+.landing-intro-delay-6 {
+  animation-delay: 700ms;
+}
+
+@keyframes landing-intro-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes landing-reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 56px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes landing-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes landing-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  50% {
+    transform: translate3d(14px, -10px, 0) scale(1);
+  }
+}
+
 :root {
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -187,4 +263,81 @@ html {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.landing-reveal {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0);
+  transition:
+    opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.landing-reveal[data-reveal="left"] {
+  transform: translate3d(-56px, 0, 0);
+}
+
+.landing-reveal[data-reveal="right"] {
+  transform: translate3d(56px, 0, 0);
+}
+
+.landing-reveal[data-reveal="scale"] {
+  transform: translate3d(0, 28px, 0) scale(0.92);
+}
+
+.landing-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.landing-hero-illustration {
+  animation: landing-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.landing-hero-orb {
+  animation: landing-drift 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.landing-hero-ring {
+  animation: landing-float 10s ease-in-out infinite reverse;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .landing-intro,
+  .landing-intro-delay-1,
+  .landing-intro-delay-2,
+  .landing-intro-delay-3,
+  .landing-intro-delay-4,
+  .landing-intro-delay-5,
+  .landing-intro-delay-6 {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .landing-reveal,
+  .landing-reveal[data-reveal="left"],
+  .landing-reveal[data-reveal="right"],
+  .landing-reveal[data-reveal="scale"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .landing-hero-illustration,
+  .landing-hero-orb,
+  .landing-hero-ring {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
 }

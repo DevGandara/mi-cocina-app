@@ -2,15 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Instagram, Phone, ArrowDown } from "lucide-react";
+import { Reveal } from "@/components/landing/reveal";
 import { WhatsAppIcon } from "../icons/WhatsappIcon";
 
 export function Hero() {
   return (
     <div className="relative min-h-screen flex flex-col">
-      <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-12 items-center animate-blurred-fade-in animate-duration-1000">
-        <div className="space-y-8 text-center lg:text-left animate-fade-in-right animate-duration-1000 animate-delay-500">
+      <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="space-y-8 text-center lg:text-left">
           <div className="space-y-4">
-            <div className="flex justify-center lg:justify-start ">
+            <div className="landing-intro landing-intro-delay-1 flex justify-center lg:justify-start ">
               <Image
                 src="/mi-cocina-logo.png"
                 alt="Mi Cocina Logo"
@@ -20,23 +21,29 @@ export function Hero() {
                 priority
               />
             </div>
-            <h2 className="text-primary font-medium tracking-wide uppercase text-sm md:text-base">
-              Experiencias Gastronómicas Inolvidables
-            </h2>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
-              Banquetes y{" "}
-              <span className="text-primary">sabor tradicional</span> para
-              momentos especiales
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              En <span className="font-bold">Mi Cocina</span>, creamos
-              experiencias gastronómicas únicas para bodas, eventos
-              empresariales y celebraciones familiares. Calidad, sabor y
-              presentación que superan expectativas.
-            </p>
+            <div className="landing-intro landing-intro-delay-2">
+              <h2 className="text-primary font-medium tracking-wide uppercase text-sm md:text-base">
+                Experiencias Gastronómicas Inolvidables
+              </h2>
+            </div>
+            <div className="landing-intro landing-intro-delay-3">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.1]">
+                Banquetes y{" "}
+                <span className="text-primary">sabor tradicional</span> para
+                momentos especiales
+              </h1>
+            </div>
+            <div className="landing-intro landing-intro-delay-4">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                En <span className="font-bold">Mi Cocina</span>, creamos
+                experiencias gastronómicas únicas para bodas, eventos
+                empresariales y celebraciones familiares. Calidad, sabor y
+                presentación que superan expectativas.
+              </p>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-blurred-fade-in">
+          <div className="landing-intro landing-intro-delay-5 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button
               asChild
               variant={"default"}
@@ -55,7 +62,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="pt-4 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
+          <div className="landing-intro landing-intro-delay-6 pt-4 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-4">
               <a
                 href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
@@ -85,24 +92,25 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-[500px] mx-auto lg:max-w-none">
+        <div className="landing-intro landing-intro-delay-4 relative w-full max-w-[500px] mx-auto lg:max-w-none">
           <div className="relative aspect-square md:aspect-4/3 lg:aspect-square w-full">
-            <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-full blur-3xl -z-10 scale-90" />
+            <div className="landing-hero-orb absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-full blur-3xl -z-10 scale-90" />
+            <div className="landing-hero-ring absolute inset-[12%] rounded-full border border-primary/15 -z-10" />
             <Image
               src="/catering-service-bro.svg"
               alt="Servicio de Catering Profesional"
               fill
-              className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 animate-blurred-fade-in"
+              className="landing-hero-illustration object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 animate-blurred-fade-in"
               priority
             />
           </div>
         </div>
       </section>
-      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center pb-6">
-        <span className="p-2 rounded-full  border border-white/20 shadow-lg shadow-black/10 animate-bounce bg-linear-to-br from-primary/20 to-white">
+      <Reveal delay={180} className="absolute bottom-0 left-0 right-0 flex items-center justify-center pb-6">
+        <span className="p-2 rounded-full border border-white/20 shadow-lg shadow-black/10 animate-bounce bg-linear-to-br from-primary/20 to-white">
           <ArrowDown className="text-black z-50" size={20} />
         </span>
-      </div>
+      </Reveal>
     </div>
   );
 }

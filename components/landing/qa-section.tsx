@@ -1,5 +1,6 @@
 "use client";
 
+import { Reveal } from "@/components/landing/reveal";
 import { MessageCircleQuestion } from "lucide-react";
 import {
   Accordion,
@@ -55,21 +56,27 @@ export const QASection = () => {
     >
       {/* Header */}
       <div className="text-center mb-12 md:mb-16 space-y-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wide">
-          <MessageCircleQuestion className="size-4" />
-          FAQ
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-          Preguntas <span className="text-primary">Frecuentes</span>
-        </h2>
-        <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          Resolvemos tus dudas más comunes sobre nuestros servicios de banquetes
-          y catering.
-        </p>
+        <Reveal delay={40} className="flex justify-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wide">
+            <MessageCircleQuestion className="size-4" />
+            FAQ
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+            Preguntas <span className="text-primary">Frecuentes</span>
+          </h2>
+        </Reveal>
+        <Reveal delay={200}>
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Resolvemos tus dudas más comunes sobre nuestros servicios de banquetes
+            y catering.
+          </p>
+        </Reveal>
       </div>
 
       {/* Accordion */}
-      <div className="relative max-w-2xl mx-auto">
+      <Reveal direction="up" delay={120} className="relative max-w-2xl mx-auto">
         {/* Decorative glow */}
         <div className="absolute -inset-4 bg-linear-to-br from-primary/5 via-transparent to-primary/5 rounded-3xl blur-2xl -z-10" />
 
@@ -101,7 +108,7 @@ export const QASection = () => {
             ))}
           </Accordion>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

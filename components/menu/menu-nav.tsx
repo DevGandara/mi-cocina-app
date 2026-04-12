@@ -12,7 +12,7 @@ export function MenuNav({ activeCategory, onCategoryChange }: MenuNavProps) {
     <div className="sticky top-16 md:top-32 z-40 w-full py-4 flex justify-center px-4">
       <nav
         className="flex gap-1.5 overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                   px-3 py-2 rounded-full border border-white/20 bg-white/15 backdrop-blur-md shadow-lg shadow-black/10"
+                   px-3 py-2 rounded-full border border-white/20 bg-white/55 backdrop-blur-md shadow-lg shadow-black/10"
         role="tablist"
         aria-label="Categorías del menú"
       >
