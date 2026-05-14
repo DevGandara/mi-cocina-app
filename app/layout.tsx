@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { getSiteUrl, siteConfig, siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,62 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mi Cocina | Aguascalientes",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Mi Cocina | Banquetes en Aguascalientes",
+    template: "%s | Mi Cocina",
+  },
   description:
-    "Mi Cocina es una empresa gastronómica especializada en comida casera y banquetes para todo tipo de eventos. Sabor auténtico, calidad y servicio profesional para hacer de cada ocasión un momento especial.",
+    siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: [
+    "banquetes en Aguascalientes",
+    "catering en Aguascalientes",
+    "comida casera para eventos",
+    "menus para eventos",
+    "banquetes mexicanos",
+    "Mi Cocina",
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: getSiteUrl("/"),
+    siteName: siteConfig.name,
+    title: "Mi Cocina | Banquetes en Aguascalientes",
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 1200,
+        alt: "Logo de Mi Cocina",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mi Cocina | Banquetes en Aguascalientes",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  category: "food",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({

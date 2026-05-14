@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/landing/hero";
 import { ExperienceSection } from "@/components/landing/experience/experience-section";
 import { Mision } from "@/components/landing/mision";
@@ -5,6 +6,21 @@ import Pricing from "@/components/landing/pricing/pricing";
 import { QASection } from "@/components/landing/qa-section";
 import { TributeSection } from "@/components/landing/tribute-section";
 import { Footer } from "@/components/landing/footer";
+
+export const metadata: Metadata = {
+  title: "Banquetes y Catering en Aguascalientes",
+  description:
+    "Servicio de banquetes, menus mexicanos e internacionales y comida casera para bodas, eventos empresariales y celebraciones familiares en Aguascalientes.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Mi Cocina | Banquetes y Catering en Aguascalientes",
+    description:
+      "Conoce nuestros paquetes, menus y servicio profesional para eventos inolvidables en Aguascalientes.",
+    url: "/",
+  },
+};
 
 export default function Home() {
   return (
