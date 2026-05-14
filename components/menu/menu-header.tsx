@@ -8,6 +8,7 @@ export function MenuHeader() {
           src="/menu-collage.png"
           alt="Collage de platillos"
           fill
+          sizes="100vw"
           className="object-cover scale-110 blur-sm"
           priority
         />

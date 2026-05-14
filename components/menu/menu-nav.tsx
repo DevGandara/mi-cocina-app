@@ -1,29 +1,33 @@
-"use client";
-
-import { menuCategories } from "./menu-data";
+import Link from "next/link";
+import {
+  menuCategorySummaries,
+  type MenuCategoryId,
+} from "@/lib/constants/menu";
+import { MenuCategoryIcon } from "./menu-icons";
 
 interface MenuNavProps {
-  activeCategory: string;
-  onCategoryChange: (id: string) => void;
+  activeCategory: MenuCategoryId;
 }
 
-export function MenuNav({ activeCategory, onCategoryChange }: MenuNavProps) {
+export function MenuNav({ activeCategory }: MenuNavProps) {
   return (
     <div className="sticky top-16 md:top-32 z-40 w-full py-4 flex justify-center px-4">
       <nav
         className="flex gap-1.5 overflow-x-auto scrollbar-hide snap-x snap-mandatory
                    px-3 py-2 rounded-full border border-white/20 bg-white/55 backdrop-blur-md shadow-lg shadow-black/10"
         role="tablist"
-        aria-label="Categorías del menú"
+        aria-label="Categorias del menu"
       >
-        {menuCategories.map((category) => {
+        {menuCategorySummaries.map((category) => {
           const isActive = activeCategory === category.id;
+
           return (
-            <button
+            <Link
               key={category.id}
+              href={`/menu?categoria=${category.id}`}
               role="tab"
               aria-selected={isActive}
-              onClick={() => onCategoryChange(category.id)}
+              aria-current={isActive ? "page" : undefined}
               className={`
                 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
                 whitespace-nowrap snap-start transition-all duration-300 cursor-pointer
@@ -35,9 +39,9 @@ export function MenuNav({ activeCategory, onCategoryChange }: MenuNavProps) {
                 }
               `}
             >
-              <span className="text-base">{category.icon}</span>
+              <MenuCategoryIcon iconKey={category.iconKey} size={20} />
               <span>{category.label}</span>
-            </button>
+            </Link>
           );
         })}
       </nav>

@@ -81,7 +81,6 @@ export const Navbar = () => {
                 alt="Logo"
                 width={50}
                 height={50}
-                priority
               />
             </div>
             <div className="h-px w-full bg-white/20" />

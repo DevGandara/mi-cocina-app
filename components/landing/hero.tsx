@@ -21,7 +21,6 @@ export function Hero() {
                 width={150}
                 height={150}
                 className="object-contain drop-shadow-md"
-                priority
               />
             </div>
             <div className="landing-intro landing-intro-delay-2">
@@ -109,6 +108,7 @@ export function Hero() {
               src="/catering-service-bro.svg"
               alt="Servicio de Catering Profesional"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="landing-hero-illustration object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500 animate-blurred-fade-in"
               priority
             />
