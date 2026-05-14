@@ -12,6 +12,9 @@ import { WhatsAppIcon } from "../icons/WhatsappIcon";
 import { Button } from "../ui/button";
 
 export const Footer = () => {
+  const whatsappQuoteHref =
+    "https://wa.me/524491942472?text=Hola%2C%20me%20gustaria%20cotizar%20un%20evento%20con%20Mi%20Cocina.";
+
   return (
     <footer className="w-full">
       <div className="relative w-full" id="contact">
@@ -39,10 +42,15 @@ export const Footer = () => {
               size="lg"
               className="mt-2 px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
             >
-              <Link href="/cotizar" className="flex items-center gap-2">
+              <a
+                href={whatsappQuoteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
                 Cotizar Evento
                 <ChevronRight className="size-4" />
-              </Link>
+              </a>
             </Button>
           </div>
 

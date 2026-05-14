@@ -6,6 +6,9 @@ import { Reveal } from "@/components/landing/reveal";
 import { WhatsAppIcon } from "../icons/WhatsappIcon";
 
 export function Hero() {
+  const whatsappQuoteHref =
+    "https://wa.me/524491942472?text=Hola%2C%20me%20gustaria%20solicitar%20una%20cotizacion%20para%20un%20evento.";
+
   return (
     <div className="relative min-h-screen flex flex-col">
       <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-12 items-center">
@@ -50,7 +53,13 @@ export function Hero() {
               size={"lg"}
               className="px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
             >
-              <Link href="/cotizar">Solicitar Cotización</Link>
+              <a
+                href={whatsappQuoteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Solicitar Cotizacion
+              </a>
             </Button>
             <Button
               asChild
