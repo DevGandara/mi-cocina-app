@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
-import { getSiteUrl, siteConfig, siteUrl } from "@/lib/site";
+import { getSiteUrl, hasPublicSiteUrl, siteConfig, siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: hasPublicSiteUrl ? new URL(siteUrl) : undefined,
   title: {
     default: "Mi Cocina | Banquetes en Aguascalientes",
     template: "%s | Mi Cocina",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
-    url: getSiteUrl("/"),
+    url: hasPublicSiteUrl ? getSiteUrl("/") : undefined,
     siteName: siteConfig.name,
     title: "Mi Cocina | Banquetes en Aguascalientes",
     description: siteConfig.description,

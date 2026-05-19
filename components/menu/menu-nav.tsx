@@ -15,7 +15,6 @@ export function MenuNav({ activeCategory }: MenuNavProps) {
       <nav
         className="flex gap-1.5 overflow-x-auto scrollbar-hide snap-x snap-mandatory
                    px-3 py-2 rounded-full border border-white/20 bg-white/55 backdrop-blur-md shadow-lg shadow-black/10"
-        role="tablist"
         aria-label="Categorias del menu"
       >
         {menuCategorySummaries.map((category) => {
@@ -25,8 +24,6 @@ export function MenuNav({ activeCategory }: MenuNavProps) {
             <Link
               key={category.id}
               href={`/menu?categoria=${category.id}`}
-              role="tab"
-              aria-selected={isActive}
               aria-current={isActive ? "page" : undefined}
               className={`
                 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium

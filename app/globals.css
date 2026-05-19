@@ -266,23 +266,28 @@ html {
 }
 
 .landing-reveal {
-  opacity: 0;
-  transform: translate3d(0, 56px, 0);
+  opacity: 1;
+  transform: none;
   transition:
     opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-.landing-reveal[data-reveal="left"] {
+.landing-reveal.is-ready {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0);
+}
+
+.landing-reveal.is-ready[data-reveal="left"] {
   transform: translate3d(-56px, 0, 0);
 }
 
-.landing-reveal[data-reveal="right"] {
+.landing-reveal.is-ready[data-reveal="right"] {
   transform: translate3d(56px, 0, 0);
 }
 
-.landing-reveal[data-reveal="scale"] {
+.landing-reveal.is-ready[data-reveal="scale"] {
   transform: translate3d(0, 28px, 0) scale(0.92);
 }
 

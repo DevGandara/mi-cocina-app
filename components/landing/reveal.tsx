@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 type RevealProps = {
@@ -17,25 +17,22 @@ export function Reveal({
   direction = "up",
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(() => {
-    if (typeof window === "undefined") {
-      return false;
-    }
-
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  });
 
   useEffect(() => {
     const element = ref.current;
 
-    if (!element || isVisible) {
+    if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
+
+    const frameId = window.requestAnimationFrame(() => {
+      element.classList.add("is-ready");
+    });
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          element.classList.add("is-visible");
           observer.unobserve(entry.target);
         }
       },
@@ -47,13 +44,16 @@ export function Reveal({
 
     observer.observe(element);
 
-    return () => observer.disconnect();
-  }, [isVisible]);
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
       ref={ref}
-      className={cn("landing-reveal", isVisible && "is-visible", className)}
+      className={cn("landing-reveal", className)}
       data-reveal={direction}
       style={{ transitionDelay: `${delay}ms` }}
     >

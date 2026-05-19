@@ -1,8 +1,30 @@
-const defaultSiteUrl = "http://localhost:3000";
+const localhostUrl = "http://localhost:3000";
 
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+function normalizeSiteUrl(value?: string) {
+  const normalizedValue = value?.trim();
 
-export const siteUrl = rawSiteUrl?.length ? rawSiteUrl : defaultSiteUrl;
+  if (!normalizedValue) {
+    return null;
+  }
+
+  const withProtocol = normalizedValue.startsWith("http")
+    ? normalizedValue
+    : `https://${normalizedValue}`;
+
+  try {
+    return new URL(withProtocol).toString().replace(/\/$/, "");
+  } catch {
+    return null;
+  }
+}
+
+const configuredSiteUrl =
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  normalizeSiteUrl(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
+  normalizeSiteUrl(process.env.VERCEL_URL);
+
+export const hasPublicSiteUrl = Boolean(configuredSiteUrl);
+export const siteUrl = configuredSiteUrl ?? localhostUrl;
 
 export const siteConfig = {
   name: "Mi Cocina",
