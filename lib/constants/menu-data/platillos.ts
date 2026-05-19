@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createSectionedCategory } from "../menu.types";
 
-export const platillosCategory: MenuCategory = {
+export const platillosCategory = createSectionedCategory({
   id: "platillos",
   label: "Platillos",
   iconKey: "hand-platter",
@@ -230,4 +230,4 @@ export const platillosCategory: MenuCategory = {
       ],
     },
   ],
-};
+});

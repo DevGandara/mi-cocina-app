@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createSectionedCategory } from "../menu.types";
 
-export const mexicanoCategory: MenuCategory = {
+export const mexicanoCategory = createSectionedCategory({
   id: "mexicano",
   label: "Mexicano",
   iconKey: "flag",
@@ -176,4 +176,4 @@ export const mexicanoCategory: MenuCategory = {
       ],
     },
   ],
-};
+});

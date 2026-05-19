@@ -1,6 +1,8 @@
 import Image from "next/image";
 import {
+  getMenuDishCount,
   getMenuCategory,
+  hasMenuSections,
   type Dish,
   type MenuCategoryId,
 } from "@/lib/constants/menu";
@@ -108,9 +110,7 @@ export function MenuGrid({ activeCategory }: MenuGridProps) {
     return null;
   }
 
-  const totalDishes = category.sections
-    ? category.sections.reduce((sum, section) => sum + section.dishes.length, 0)
-    : (category.dishes?.length ?? 0);
+  const totalDishes = getMenuDishCount(category);
 
   return (
     <section className="container mx-auto px-4 py-12 md:py-16">
@@ -129,7 +129,7 @@ export function MenuGrid({ activeCategory }: MenuGridProps) {
       </div>
 
       <div key={activeCategory} className="animate-in fade-in slide-in-from-bottom-4 duration-400">
-        {category.sections ? (
+        {hasMenuSections(category) ? (
           <div className="space-y-12">
             {category.sections.map((section, sectionIndex) => (
               <div key={`${activeCategory}-section-${sectionIndex}`}>
@@ -154,7 +154,7 @@ export function MenuGrid({ activeCategory }: MenuGridProps) {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {category.dishes?.map((dish, index) => (
+            {category.dishes.map((dish, index) => (
               <DishCard key={`${activeCategory}-${index}`} dish={dish} />
             ))}
           </div>

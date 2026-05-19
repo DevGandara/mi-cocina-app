@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createDishListCategory } from "../menu.types";
 
-export const desayunosCategory: MenuCategory = {
+export const desayunosCategory = createDishListCategory({
   id: "desayunos",
   label: "Desayunos",
   iconKey: "sun",
@@ -77,4 +77,4 @@ export const desayunosCategory: MenuCategory = {
       variants: ["salsa verde", "chipotle"],
     },
   ],
-};
+});

@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createSectionedCategory } from "../menu.types";
 
-export const internacionalCategory: MenuCategory = {
+export const internacionalCategory = createSectionedCategory({
   id: "internacional",
   label: "Internacional",
   iconKey: "earth",
@@ -166,4 +166,4 @@ export const internacionalCategory: MenuCategory = {
       ],
     },
   ],
-};
+});

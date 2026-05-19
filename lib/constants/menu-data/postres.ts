@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createDishListCategory } from "../menu.types";
 
-export const postresCategory: MenuCategory = {
+export const postresCategory = createDishListCategory({
   id: "postres",
   label: "Postres",
   iconKey: "cake-slice",
@@ -46,4 +46,4 @@ export const postresCategory: MenuCategory = {
         "Fresas maduras y jugosas bañadas en crema batida. Sencillo, honesto y absolutamente irresistible cuando la fruta está en su punto.",
     },
   ],
-};
+});

@@ -1,6 +1,6 @@
-import type { MenuCategory } from "../menu.types";
+import { createSectionedCategory } from "../menu.types";
 
-export const especialCategory: MenuCategory = {
+export const especialCategory = createSectionedCategory({
   id: "especial",
   label: "Especial",
   iconKey: "sparkles",
@@ -125,4 +125,4 @@ export const especialCategory: MenuCategory = {
       ],
     },
   ],
-};
+});
