@@ -41,10 +41,10 @@ const pricing = () => {
           key={index}
           className={`relative overflow-hidden
         bg-background
-        p-8 rounded-3xl
+        p-6 sm:p-8 rounded-3xl
         shadow-sm hover:shadow-xl hover:shadow-primary/8
         transition-all duration-500 group text-center
-        hover:-translate-y-2 flex flex-col justify-between gap-4 py-12
+        hover:-translate-y-2 flex flex-col justify-between gap-4 py-10 sm:py-12
         ${
           buffet.popular
             ? "border-2 border-primary/40 ring-4 ring-primary/10 bg-primary/2"
@@ -59,21 +59,21 @@ const pricing = () => {
 
           {/* Badge popular */}
           {buffet.popular && (
-            <span className="flex items-center gap-2 absolute top-4 right-4 bg-primary/10 border border-primary/30 text-primary text-xs font-semibold px-3 py-1 rounded-full z-20 ">
+            <span className="flex items-center gap-2 absolute top-3 right-3 bg-primary/10 border border-primary/30 text-primary text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 rounded-full z-20 ">
               <Heart className="shrink-0" size={12} />
               Más popular
             </span>
           )}
 
           <CardHeader className="p-0 relative z-10">
-            <CardTitle className="text-center text-2xl">
+            <CardTitle className="pr-12 text-center text-xl sm:text-2xl">
               {buffet.title}
             </CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
-            <ul className="text-muted-foreground space-y-1">
+            <ul className="space-y-1.5 text-sm text-muted-foreground sm:text-base">
               {buffet.description.map((item, index) => (
-                <li key={index} className="flex items-center gap-2">
+                <li key={index} className="flex items-start gap-2 text-left">
                   <Check className="text-primary shrink-0" size={16} />
                   {item}
                 </li>
@@ -82,7 +82,7 @@ const pricing = () => {
           </CardContent>
           <CardFooter className="flex flex-col items-center justify-center gap-3 relative z-10">
             <div className="flex flex-col items-center gap-1">
-              <p className="text-primary font-extrabold text-4xl">
+              <p className="text-primary font-extrabold text-3xl sm:text-4xl">
                 {buffet.price}
               </p>
               <span className="text-xs text-muted-foreground">por persona</span>

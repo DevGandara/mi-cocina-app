@@ -47,6 +47,8 @@ export const Navbar = () => {
             onClick={() => setOpen(!open)}
             className="md:hidden flex flex-col justify-center items-center gap-[5px] p-3"
             aria-label="Menú"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
             <span
               className={`block w-5 h-[2px] bg-current transition-all duration-300 ${
@@ -68,6 +70,7 @@ export const Navbar = () => {
 
         {/* Mobile dropdown */}
         <div
+          id="mobile-nav"
           className={`md:hidden absolute top-full right-0 mt-2 w-48 rounded-2xl border border-white/20 bg-white/85 backdrop-blur-md shadow-lg shadow-black/10 overflow-hidden transition-all duration-300 ${
             open
               ? "opacity-100 scale-100 translate-y-0"

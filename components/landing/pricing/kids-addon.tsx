@@ -12,7 +12,7 @@ const KidsMenuAddOn = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       {/* Encabezado */}
-      <div className="flex items-center gap-3 mb-8">
+      <div className="mb-8 flex w-full max-w-3xl items-start gap-3 sm:items-center">
         <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
           <Baby size={20} />
         </span>
@@ -26,14 +26,14 @@ const KidsMenuAddOn = () => {
         </div>
       </div>
 
-      <Card
-        className="relative overflow-hidden
+        <Card
+          className="relative overflow-hidden
         bg-background border border-border/40
-        p-8 rounded-3xl
+        w-full max-w-3xl p-6 sm:p-8 rounded-3xl
         shadow-sm hover:shadow-xl hover:shadow-primary/8
         transition-all duration-500 group
-        hover:-translate-y-2 flex flex-col justify-between gap-4 max-w-3/4"
-      >
+        hover:-translate-y-2 flex flex-col justify-between gap-4"
+        >
         {/* Línea decorativa superior */}
         <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
         {/* Gradiente hover */}
@@ -44,9 +44,9 @@ const KidsMenuAddOn = () => {
         </CardHeader>
 
         <CardContent className="relative z-10 p-0">
-          <ul className="text-muted-foreground space-y-1">
+          <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
             {items.map((item) => (
-              <li key={item} className="flex items-center gap-2">
+              <li key={item} className="flex items-start gap-2">
                 <Check className="text-primary shrink-0" size={16} />
                 {item}
               </li>

@@ -20,11 +20,11 @@ export function ExperienceCard({
 }) {
   return (
     <Reveal delay={index * 140} direction="up">
-      <Card
-        className="
+        <Card
+          className="
           relative overflow-hidden
           bg-background border border-border/40
-          p-8 rounded-3xl
+          h-full p-6 sm:p-8 rounded-3xl
           shadow-none hover:shadow-xl hover:shadow-primary/8
           transition-all duration-500 group text-center
           hover:-translate-y-2
@@ -47,7 +47,7 @@ export function ExperienceCard({
           >
             {logo}
           </div>
-          <CardTitle className="text-lg font-semibold tracking-tight leading-relaxed text-balance text-foreground/90 line-clamp-3 min-h-12">
+          <CardTitle className="min-h-0 text-base sm:text-lg font-semibold tracking-tight leading-relaxed text-balance text-foreground/90 sm:min-h-12">
             {title}
           </CardTitle>
         </CardHeader>

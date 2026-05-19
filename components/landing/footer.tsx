@@ -14,15 +14,16 @@ import { siteConfig } from "@/lib/site";
 
 export const Footer = () => {
   return (
-    <footer className="w-full">
-      <div className="relative w-full" id="contact">
-        <div className="absolute -inset-8 bg-linear-to-b from-amber-100/30 via-transparent to-amber-100/20 rounded-[2rem] blur-3xl -z-10" />
+    <footer className="w-full" id="contact">
+      <div className="w-full">
+        <div className="relative overflow-x-clip rounded-[2rem]">
+          <div className="pointer-events-none absolute inset-x-0 -inset-y-8 rounded-[2rem] bg-linear-to-b from-amber-100/30 via-transparent to-amber-100/20 blur-3xl -z-10" />
 
-        <div className="relative bg-card/70 backdrop-blur-sm border border-y-0 border-r-amber-200/40 border-l-amber-200/40 rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative overflow-hidden rounded-2xl border border-y-0 border-r-amber-200/40 border-l-amber-200/40 bg-card/70 shadow-xl backdrop-blur-sm">
           <div className="h-1 bg-linear-to-r from-transparent via-primary/80 to-transparent" />
 
           {/* ── CTA Section ── */}
-          <div className="px-6 py-8 md:px-10 md:py-10 flex flex-col items-center text-center gap-4">
+          <div className="flex flex-col items-center gap-4 px-5 py-8 text-center sm:px-6 md:px-10 md:py-10">
             <div className="flex items-center gap-2 text-amber-600/70">
               <span className="h-px w-10 bg-amber-400/40" />
               <Utensils className="size-4" />
@@ -38,7 +39,7 @@ export const Footer = () => {
             <Button
               asChild
               size="lg"
-              className="mt-2 px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
+              className="mt-2 w-full sm:w-auto px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
             >
               <a
                 href={siteConfig.whatsappEventQuoteUrl}
@@ -52,10 +53,10 @@ export const Footer = () => {
             </Button>
           </div>
 
-          <div className="h-px mx-6 md:mx-10 bg-linear-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="mx-5 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent sm:mx-6 md:mx-10" />
 
           {/* ── Main content: 3-column on desktop ── */}
-          <div className="px-6 py-8 md:px-10 md:py-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 items-start gap-8 px-5 py-8 sm:px-6 md:grid-cols-3 md:gap-6 md:px-10 md:py-10 lg:gap-10">
             {/* Column 1 — Map + Address */}
             <div className="space-y-3">
               <h3 className="flex items-center gap-2 text-green-600/70">
@@ -64,7 +65,7 @@ export const Footer = () => {
                   Ubicación
                 </span>
               </h3>
-              <div className="relative rounded-xl overflow-hidden border border-amber-200/30 shadow-sm h-48 md:h-56 group">
+              <div className="relative rounded-xl overflow-hidden border border-amber-200/30 shadow-sm h-40 sm:h-48 md:h-56 group">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29614.741819890332!2d-102.30824960000001!3d21.9021312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef5eefe826d1%3A0xce7b8b83f94d417e!2sMi%20Cocina!5e0!3m2!1ses-419!2smx!4v1773175431002!5m2!1ses-419!2smx"
                   className="w-full h-full"
@@ -190,7 +191,7 @@ export const Footer = () => {
 
           {/* Bottom bar */}
           <div className="h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
-          <div className="px-6 md:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-muted-foreground/70">
+          <div className="flex flex-col items-center justify-between gap-2 px-5 py-4 text-center text-[11px] text-muted-foreground/70 sm:flex-row sm:text-left sm:px-6 md:px-10">
             <p>
               © {new Date().getFullYear()} Mi Cocina. Todos los derechos
               reservados.
@@ -206,6 +207,7 @@ export const Footer = () => {
 
           {/* Bottom decorative gold line */}
           <div className="h-1 bg-linear-to-r from-transparent via-primary/80 to-transparent" />
+          </div>
         </div>
       </div>
     </footer>

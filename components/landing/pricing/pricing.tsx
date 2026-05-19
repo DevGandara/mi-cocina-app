@@ -84,17 +84,17 @@ const pricing = () => {
           {/* Servicio Extra y Desayunos */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Servicio Extra */}
-            <Reveal direction="left" delay={80}>
-              <div>
-                <div className="flex items-center gap-3 mb-8">
+          <Reveal direction="left" delay={80}>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3 text-left sm:items-center mb-8">
                   <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
                     <CirclePlus size={20} />
                   </span>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground leading-tight">
                       Servicio Extra
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       Recomendado para baby shower, despedida de soltera, canasta,
                       etc.
                     </p>
@@ -105,17 +105,17 @@ const pricing = () => {
             </Reveal>
 
             {/* Desayunos */}
-            <Reveal direction="right" delay={140}>
-              <div>
-                <div className="flex items-center gap-3 mb-8">
+          <Reveal direction="right" delay={140}>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3 text-left sm:items-center mb-8">
                   <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
                     <Egg size={20} />
                   </span>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground leading-tight">
                       Desayunos
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       Porque la mejor forma de empezar el día es con el corazón
                       contento y la panza llena.
                     </p>

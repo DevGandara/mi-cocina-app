@@ -20,19 +20,34 @@ export function Reveal({
 
   useEffect(() => {
     const element = ref.current;
+    let readyFrameId = 0;
+    let visibleFrameId = 0;
 
     if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
 
-    const frameId = window.requestAnimationFrame(() => {
-      element.classList.add("is-ready");
+    element.classList.add("is-preparing", "is-ready");
+
+    readyFrameId = window.requestAnimationFrame(() => {
+      element.classList.remove("is-preparing");
     });
+
+    const revealElement = () => {
+      if (element.classList.contains("is-preparing")) {
+        visibleFrameId = window.requestAnimationFrame(() => {
+          element.classList.add("is-visible");
+        });
+        return;
+      }
+
+      element.classList.add("is-visible");
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          element.classList.add("is-visible");
+          revealElement();
           observer.unobserve(entry.target);
         }
       },
@@ -45,7 +60,8 @@ export function Reveal({
     observer.observe(element);
 
     return () => {
-      window.cancelAnimationFrame(frameId);
+      window.cancelAnimationFrame(readyFrameId);
+      window.cancelAnimationFrame(visibleFrameId);
       observer.disconnect();
     };
   }, []);
