@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Phone, ArrowDown } from "lucide-react";
 import { Reveal } from "@/components/landing/reveal";
 import { WhatsAppIcon } from "../icons/WhatsappIcon";
+import { siteConfig } from "@/lib/site";
 
 export function Hero() {
-  const whatsappQuoteHref =
-    "https://wa.me/524491942472?text=Hola%2C%20me%20gustaria%20solicitar%20una%20cotizacion%20para%20un%20evento.";
-
   return (
     <div className="relative min-h-screen flex flex-col">
       <section className="container min-h-screen mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-12 items-center">
@@ -53,7 +51,7 @@ export function Hero() {
               className="px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
             >
               <a
-                href={whatsappQuoteHref}
+                href={siteConfig.whatsappQuoteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -73,7 +71,7 @@ export function Hero() {
           <div className="landing-intro landing-intro-delay-6 pt-4 flex items-center justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-4">
               <a
-                href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
+                href={siteConfig.instagramUrl}
                 className="p-2 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] cursor-pointer hover:brightness-125 hover:scale-110 transition-all "
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +79,7 @@ export function Hero() {
                 <Instagram className="text-white shrink-0" size={20} />
               </a>
               <a
-                href="https://wa.me/524491942472"
+                href={siteConfig.whatsappUrl}
                 className="p-2 rounded-full bg-linear-to-br from-[#25D366] via-[#31ca69] to-[#42a365] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -89,10 +87,8 @@ export function Hero() {
                 <WhatsAppIcon className="text-white shrink-0" size={20} />
               </a>
               <a
-                href="tel:+524491942472"
+                href={siteConfig.telUrl}
                 className="p-2 rounded-full bg-linear-to-br from-[#2898ee] via-[#107acc] to-[#0cbccc] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Phone className="text-white shrink-0" size={20} />
               </a>

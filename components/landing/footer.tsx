@@ -10,11 +10,9 @@ import {
 } from "lucide-react";
 import { WhatsAppIcon } from "../icons/WhatsappIcon";
 import { Button } from "../ui/button";
+import { siteConfig } from "@/lib/site";
 
 export const Footer = () => {
-  const whatsappQuoteHref =
-    "https://wa.me/524491942472?text=Hola%2C%20me%20gustaria%20cotizar%20un%20evento%20con%20Mi%20Cocina.";
-
   return (
     <footer className="w-full">
       <div className="relative w-full" id="contact">
@@ -43,7 +41,7 @@ export const Footer = () => {
               className="mt-2 px-8 py-6 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
             >
               <a
-                href={whatsappQuoteHref}
+                href={siteConfig.whatsappEventQuoteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -78,7 +76,7 @@ export const Footer = () => {
                 {/* Floating "open in maps" button */}
               </div>
               <p className="text-muted-foreground text-xs">
-                Aguascalientes, Ags., México
+                {siteConfig.addressDisplay}
               </p>
             </div>
 
@@ -93,18 +91,18 @@ export const Footer = () => {
               <ul className="space-y-1.5">
                 <li>
                   <a
-                    href="tel:+524491942472"
+                    href={siteConfig.telUrl}
                     className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all group text-sm rounded-lg px-2 py-2 -mx-2 hover:translate-x-0.5"
                   >
                     <span className="p-1.5 rounded-full bg-linear-to-br from-[#2898ee] via-[#107acc] to-[#0cbccc] group-hover:scale-110 transition-transform shadow-sm">
                       <Phone className="size-3 text-white" />
                     </span>
-                    +52 449 194 2472
+                    {siteConfig.phoneDisplay}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/524491942472"
+                    href={siteConfig.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all group text-sm rounded-lg px-2 py-2 -mx-2 hover:translate-x-0.5"
@@ -117,7 +115,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/micocina.ags?igsh=aWhyYW5nc2NsZTQ2"
+                    href={siteConfig.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all group text-sm rounded-lg px-2 py-2 -mx-2 hover:translate-x-0.5"
@@ -125,7 +123,7 @@ export const Footer = () => {
                     <span className="p-1.5 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] group-hover:scale-110 transition-transform shadow-sm">
                       <Instagram className="size-3 text-white" />
                     </span>
-                    @micocina.ags
+                    {siteConfig.instagramHandle}
                   </a>
                 </li>
               </ul>
@@ -183,7 +181,7 @@ export const Footer = () => {
                 </h3>
                 <div className="bg-muted/30 rounded-lg px-3 py-2.5 border border-amber-100/40">
                   <p className="text-sm text-muted-foreground">
-                    Lun – Vie · 9:00 – 15:00
+                    {siteConfig.businessHours}
                   </p>
                 </div>
               </div>
