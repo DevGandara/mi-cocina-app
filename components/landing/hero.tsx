@@ -8,13 +8,13 @@ import { siteConfig } from "@/lib/site";
 
 export function Hero() {
   return (
-    <div className="relative min-h-[100svh] flex flex-col">
-      <section className="container min-h-[100svh] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
+    <div className="relative min-h-svh flex flex-col">
+      <section className="container min-h-svh mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-24 md:pt-0 grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
         <div className="space-y-8 text-center lg:text-left">
           <div className="space-y-4">
             <div className="landing-intro landing-intro-delay-1 flex justify-center lg:justify-start ">
               <Image
-                src="/mi-cocina-logo.png"
+                src="/mi-cocina-logo.webp"
                 alt="Mi Cocina Logo"
                 width={150}
                 height={150}
@@ -111,7 +111,10 @@ export function Hero() {
           </div>
         </div>
       </section>
-      <Reveal delay={180} className="absolute bottom-0 left-0 right-0 flex items-center justify-center pb-6">
+      <Reveal
+        delay={180}
+        className="absolute bottom-0 left-0 right-0 flex items-center justify-center pb-6"
+      >
         <span className="p-2 rounded-full border border-white/20 shadow-lg shadow-black/10 animate-bounce bg-linear-to-br from-primary/20 to-white">
           <ArrowDown className="text-black z-50" size={20} />
         </span>

@@ -80,7 +80,7 @@ export const Navbar = () => {
           <div className="flex flex-col py-2">
             <div className="flex justify-center py-2">
               <Image
-                src="/mi-cocina-logo.png"
+                src="/mi-cocina-logo.webp"
                 alt="Logo"
                 width={50}
                 height={50}

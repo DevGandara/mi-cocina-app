@@ -75,6 +75,9 @@ export const desayunosCategory = createDishListCategory({
       description:
         "Piezas de pollo tiernas y jugosas vestidas con una salsa intensa que llena el plato de aroma y color desde la primera cucharada.",
       variants: ["salsa verde", "chipotle"],
-    },
+    },{
+      name: "Tamal de Espinaca, Queso y Elote",
+      description: "Un tamal hecho con masa de maíz y relleno de espinaca, queso y elote.",
+    }
   ],
 });

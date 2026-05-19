@@ -5,7 +5,7 @@ export function MenuHeader() {
     <section className="relative w-full min-h-[50vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/menu-collage.png"
+          src="/menu-collage.webp"
           alt="Collage de platillos"
           fill
           sizes="100vw"

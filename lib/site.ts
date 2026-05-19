@@ -52,7 +52,7 @@ export const siteConfig = {
   addressLocality: "Aguascalientes, Ags., Mexico",
   addressDisplay: "Aguascalientes, Ags., México",
   businessHours: "Lun - Vie · 9:00 - 15:00",
-  ogImage: "/mi-cocina-logo.png",
+  ogImage: "/mi-cocina-logo.webp",
 } as const;
 
 export function getSiteUrl(path = "/") {
