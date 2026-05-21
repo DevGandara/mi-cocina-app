@@ -35,12 +35,14 @@ export const desayunosCategory = createDishListCategory({
       name: "Costilla con Nopales",
       description:
         "Costilla jugosa y tiernos nopales de la huerta en un guiso que sabe a campo y a cocina de rancho. Un maridaje clásico e irresistible.",
+      image: "/menu/desayunos/costilla.webp",
     },
     {
       name: "Cerdo en Salsa",
       description:
         "Trozos seleccionados de cerdo cocinados en salsas de chiles auténticos que le aportan carácter y profundidad. A gusto del comensal.",
       variants: ["verde", "roja", "martajada"],
+      image: "/menu/desayunos/cerdo.webp",
     },
     {
       name: "Bistec",
@@ -52,32 +54,38 @@ export const desayunosCategory = createDishListCategory({
         "en salsa roja",
         "con champiñones",
       ],
+      image: "/menu/desayunos/bistec.webp",
     },
     {
       name: "Rajas Poblanas",
       description:
         "Chile poblano tatemado y cortado en tiras suaves, combinado con ingredientes que resaltan su sabor ahumado y ligeramente picante.",
       variants: ["con queso", "con crema", "con elote", "con papas"],
+      image: "/menu/desayunos/rajas.webp",
     },
     {
       name: "Papas al Gusto",
       description:
         "Papas en trozos bien cocidos y perfectamente sazonados, transformados según el ingrediente que elijas. Un clásico que nunca cansa.",
       variants: ["con jamón", "con chorizo", "con crema", "a la mexicana"],
+      image: "/menu/desayunos/papas.webp",
     },
     {
       name: "Molletes",
       description:
         "Bolillo tostado con frijoles refritos y queso fundido al punto exacto, coronados con pico de gallo fresco. Un desayuno directo y satisfactorio.",
+      image: "/menu/desayunos/molletes.webp",
     },
     {
       name: "Pollo en Salsa",
       description:
         "Piezas de pollo tiernas y jugosas vestidas con una salsa intensa que llena el plato de aroma y color desde la primera cucharada.",
       variants: ["salsa verde", "chipotle"],
-    },{
+      image: "/menu/desayunos/pollo.webp"
+    }, {
       name: "Tamal de Espinaca, Queso y Elote",
       description: "Un tamal hecho con masa de maíz y relleno de espinaca, queso y elote.",
+      image: "/menu/desayunos/tamal.webp"
     }
   ],
 });
