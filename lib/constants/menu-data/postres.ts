@@ -6,44 +6,59 @@ export const postresCategory = createDishListCategory({
   iconKey: "cake-slice",
   dishes: [
     {
-      name: "Pastel de Tres Leches",
+      name: "Brownie con nieve",
       description:
-        "Bizcocho esponjoso bañado lentamente en una mezcla de tres leches hasta que cada migaja queda impregnada. Suave, húmedo y delicadamente dulce.",
+        "Brownie tibio de chocolate semi-amargo, crujiente por fuera y densamente suave por dentro, servido con una bola de helado de vainilla que se funde delicadamente.",
+      image: "/menu/postres/brownie.webp"
     },
     {
-      name: "Flan Napolitano",
+      name: "Cheesecake",
       description:
-        "Textura sedosa y perfectamente firme, cubierto por un hilo de caramelo artesanal que se derrite en cada cucharada. Un clásico intemporal.",
+        "Base crujiente de galleta de mantequilla que sostiene un relleno horneado de queso crema sumamente terso, coronado con tu elección de salsa de fresa o limón.",
+      variants: ["limon", "fresa"],
+      image: "/menu/postres/cheesecake.webp"
     },
     {
-      name: "Arroz con Leche",
+      name: "Tiramisú",
       description:
-        "Cremoso, cálido y perfumado con canela. Un postre que viaja directo a la infancia y siempre deja ganas de repetir.",
+        "Clásico italiano de bizcochos soleta humedecidos en espresso y licor de café, dispuestos en capas con un sedoso mousse de queso mascarpone y espolvoreados con cacao puro.",
+      image: "/menu/postres/tiramisu.webp"
     },
     {
-      name: "Gelatina Mosaico",
+      name: "Pastel Ópera",
       description:
-        "Vibrante mosaico de gelatinas de colores suspendidas en crema, donde cada rebanada es completamente única y llena de alegría.",
+        "Elegante pastel francés de capas finas de bizcocho joconde de almendras impregnado de almíbar de café, intercaladas con crema de mantequilla al café y un terso ganache de chocolate oscuro.",
+      image: "/menu/postres/pastelopera.webp"
     },
     {
-      name: "Churros con Chocolate",
+      name: "Pan de Elote con Helado de Vainilla",
       description:
-        "Crujientes por fuera, esponjosos por dentro, espolvoreados de azúcar con canela y servidos con chocolate para fundir. El final perfecto.",
+        "Tradicional pan rústico elaborado con elote tierno y dulce, servido tibio para resaltar su textura esponjosa y acompañado de helado de vainilla gourmet.",
+      image: "/menu/postres/elote.webp"
     },
     {
-      name: "Pay de Queso",
+      name: "Tartaleta de Frutas",
       description:
-        "Base crujiente de galleta que sostiene un relleno cremoso de queso con el punto justo de dulzor, coronado con frutos rojos frescos.",
+        "Corteza crujiente de pasta sucreé rellena con una suave y aromática crema pastelera de vainilla de Papantla, decorada artísticamente con frutas frescas de temporada.",
+      image: "/menu/postres/tartaleta.webp"
     },
     {
       name: "Carlota de Limón",
       description:
-        "Postre frío de capas alternas de galletas suavizadas y crema de limón. Refrescante, cítrico y con una presentación que enamora.",
+        "Refrescante clásico hogareño de capas alternas de galletas María y una sedosa crema batida de limón verde. El balance perfecto entre lo cítrico y lo dulce.",
+      image: "/menu/postres/carlota.webp"
     },
     {
-      name: "Fresas con Crema",
+      name: "Pastel de Tres Leches",
       description:
-        "Fresas maduras y jugosas bañadas en crema batida. Sencillo, honesto y absolutamente irresistible cuando la fruta está en su punto.",
+        "Bizcocho esponjoso bañado lentamente en nuestra tradicional mezcla de tres leches hasta lograr una humedad perfecta, coronado con una ligera crema batida.",
+      image: "/menu/postres/tresleches.webp"
+    },
+    {
+      name: "Crepas",
+      description:
+        "Delgadas y delicadas crepas francesas preparadas al momento, dobladas en abanico y acompañadas de tu selección de Nutella o frutas frescas.",
+      image: "/menu/postres/crepas.webp"
     },
   ],
 });
