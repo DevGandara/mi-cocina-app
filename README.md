@@ -101,9 +101,3 @@ pnpm check
 ```
 
 Eso asegura que el proyecto pase lint, tipos y pruebas basicas.
-
-## Pendientes tecnicos recomendados
-
-- ampliar cobertura de tests en navegacion, footer y pagina de menu
-- optimizar imagenes pesadas dentro de `public/`
-- seguir reduciendo hidratacion cliente donde no aporte valor real
