@@ -1,15 +1,5 @@
-"use client";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Reveal } from "@/components/landing/reveal";
-import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
+import { MisionCarouselIsland } from "@/components/landing/mision-carousel-island";
 
 export const Mision = () => {
   return (
@@ -49,32 +39,7 @@ export const Mision = () => {
 
           {/* Carrusel */}
           <Reveal direction="right" delay={120} className="w-full max-w-xl justify-self-center">
-            <Carousel
-              className="w-full rounded-xl"
-              plugins={[
-                Autoplay({
-                  delay: 5000,
-                }),
-              ]}
-            >
-              <CarouselContent className="ml-0 sm:-ml-4">
-                {[1, 2, 3].map((i) => (
-                  <CarouselItem key={i} className="basis-full pl-0 sm:pl-4">
-                    <div className="relative w-full overflow-hidden rounded-xl aspect-[4/3] sm:aspect-6/5">
-                      <Image
-                        src={`/carrousel-${i}.webp`}
-                        alt="Servicio de catering"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:inline-flex left-3 md:-left-4" />
-              <CarouselNext className="hidden sm:inline-flex right-3 md:-right-4" />
-            </Carousel>
+            <MisionCarouselIsland />
           </Reveal>
         </div>
       </div>

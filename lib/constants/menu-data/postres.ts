@@ -57,7 +57,7 @@ export const postresCategory = createDishListCategory({
     {
       name: "Crepas",
       description:
-        "Delgadas y delicadas crepas francesas preparadas al momento, dobladas en abanico y acompañadas de tu selección de Nutella o frutas frescas.",
+        "Delgadas y delicadas crepas francesas preparadas al momento, dobladas en abanico y acompañadas de tu selección de cajeta con nuez o queso crema con mermelada.",
       image: "/menu/postres/crepas.webp"
     },
   ],

@@ -1,5 +1,3 @@
-"use client";
-
 import { Reveal } from "@/components/landing/reveal";
 import { MessageCircleQuestion } from "lucide-react";
 import {

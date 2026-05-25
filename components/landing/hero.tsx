@@ -72,6 +72,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <a
                 href={siteConfig.instagramUrl}
+                aria-label="Abrir Instagram de Mi Cocina"
                 className="p-2 rounded-full bg-linear-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] cursor-pointer hover:brightness-125 hover:scale-110 transition-all "
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,6 +81,7 @@ export function Hero() {
               </a>
               <a
                 href={siteConfig.whatsappUrl}
+                aria-label="Abrir WhatsApp de Mi Cocina"
                 className="p-2 rounded-full bg-linear-to-br from-[#25D366] via-[#31ca69] to-[#42a365] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,6 +90,7 @@ export function Hero() {
               </a>
               <a
                 href={siteConfig.telUrl}
+                aria-label="Llamar a Mi Cocina"
                 className="p-2 rounded-full bg-linear-to-br from-[#2898ee] via-[#107acc] to-[#0cbccc] cursor-pointer hover:brightness-125 hover:scale-110 transition-all shadow-lg hover:shadow-primary/25 active:scale-95"
               >
                 <Phone className="text-white shrink-0" size={20} />
