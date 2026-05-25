@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mi Cocina
 
-## Getting Started
+Landing comercial para `Mi Cocina`, un servicio de banquetes y catering en Aguascalientes. El sitio presenta paquetes, menu por categorias, informacion de contacto y activos SEO basicos para web publica.
 
-First, run the development server:
+## Stack
+
+- `Next.js 16` con App Router
+- `React 19`
+- `TypeScript`
+- `Tailwind CSS 4`
+- `radix-ui` y componentes UI propios
+- `Vitest` + `Testing Library` para pruebas
+
+## Requisitos
+
+- `Node.js` 20+
+- `pnpm` 10+
+
+## Instalacion
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Desarrollo local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+La aplicacion queda disponible en `http://localhost:3000`.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `pnpm dev` - inicia el servidor de desarrollo
+- `pnpm lint` - ejecuta ESLint
+- `pnpm typecheck` - valida tipos con TypeScript
+- `pnpm test` - ejecuta la suite de pruebas una vez
+- `pnpm test:watch` - ejecuta pruebas en modo observacion
+- `pnpm check` - corre `lint`, `typecheck` y `test`
+- `pnpm build` - genera el build de produccion
+- `pnpm start` - levanta el build de produccion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Variables de entorno
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+La variable importante para metadata y SEO es:
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_SITE_URL=
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Usos:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- define la URL canonica del sitio
+- completa `metadataBase`, `sitemap.xml` y `robots.txt`
+- evita caer al fallback local `http://localhost:3000`
+
+Si no esta definida, el proyecto intenta usar variables de Vercel (`VERCEL_PROJECT_PRODUCTION_URL` o `VERCEL_URL`).
+
+## Testing
+
+La base actual de pruebas cubre tres frentes:
+
+- `tests/lib/site.test.ts` - validacion de normalizacion de URL publica
+- `tests/lib/menu.test.ts` - consistencia del dominio del menu
+- `tests/components/hero.test.tsx` - accesibilidad de enlaces con iconos en el hero
+
+Ejecutar todas las validaciones recomendadas:
+
+```bash
+pnpm check
+```
+
+## Estructura del proyecto
+
+```text
+app/                        rutas y metadata del App Router
+components/                 componentes UI y secciones del sitio
+components/landing/         bloques del landing principal
+components/menu/            navegacion y grilla del menu
+lib/                        utilidades, config de sitio y constantes
+lib/constants/menu-data/    datos de categorias y platillos
+public/                     imagenes y activos estaticos
+tests/                      pruebas automatizadas
+```
+
+## Notas de arquitectura
+
+- `app/layout.tsx` concentra metadata global, SEO y navbar compartido.
+- `lib/site.ts` centraliza branding, enlaces de contacto, URL publica y helpers SEO.
+- `lib/constants/menu.ts` y `lib/constants/menu.types.ts` modelan el dominio del menu.
+- Las partes interactivas pesadas del landing se aislan como islas cliente para evitar problemas de hidratacion innecesaria.
+- `components/landing/mision-carousel-island.tsx` envuelve la carga cliente del carrusel para mantener `mision.tsx` como server component.
+
+## Flujo recomendado
+
+Antes de abrir un commit o PR:
+
+```bash
+pnpm check
+```
+
+Eso asegura que el proyecto pase lint, tipos y pruebas basicas.
+
+## Pendientes tecnicos recomendados
+
+- ampliar cobertura de tests en navegacion, footer y pagina de menu
+- optimizar imagenes pesadas dentro de `public/`
+- seguir reduciendo hidratacion cliente donde no aporte valor real
