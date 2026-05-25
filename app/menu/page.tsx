@@ -3,10 +3,7 @@ import { Footer } from "@/components/landing/footer";
 import { MenuGrid } from "@/components/menu/menu-grid";
 import { MenuHeader } from "@/components/menu/menu-header";
 import { MenuNav } from "@/components/menu/menu-nav";
-import {
-  isMenuCategoryId,
-  type MenuCategoryId,
-} from "@/lib/constants/menu";
+import { resolveActiveCategory } from "@/lib/menu-page";
 
 export const metadata: Metadata = {
   title: "Menu de Banquetes y Platillos",
@@ -29,15 +26,9 @@ interface MenuPageProps {
   }>;
 }
 
-const defaultCategory: MenuCategoryId = "mexicano";
-
 export default async function MenuPage({ searchParams }: MenuPageProps) {
   const resolvedSearchParams = searchParams ? await searchParams : undefined;
-  const requestedCategory = resolvedSearchParams?.categoria;
-  const activeCategory =
-    requestedCategory && isMenuCategoryId(requestedCategory)
-      ? requestedCategory
-      : defaultCategory;
+  const activeCategory = resolveActiveCategory(resolvedSearchParams?.categoria);
 
   return (
     <main className="min-h-dvh bg-background relative overflow-x-clip flex flex-col items-center bg-linear-to-br from-primary/10 via-background to-primary/10">

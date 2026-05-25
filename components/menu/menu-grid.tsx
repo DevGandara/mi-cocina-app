@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Tags } from "lucide-react";
 import {
   getMenuDishCount,
   getMenuCategory,
@@ -12,41 +13,45 @@ interface MenuGridProps {
   activeCategory: MenuCategoryId;
 }
 
-const VARIANTS_LIMIT = 4;
+const VARIANTS_LIMIT = 3;
 
 const variantPillClass =
-  "text-xs text-muted-foreground bg-primary/20 px-2 py-0.5 rounded-full border border-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300";
+  "inline-flex items-center rounded-full border border-primary/15 bg-primary/6 px-1.5 py-0.5 text-[10px] font-medium tracking-[0.08em] text-foreground/70 uppercase";
 
 function VariantList({ dishName, variants }: { dishName: string; variants: string[] }) {
   const hasMore = variants.length > VARIANTS_LIMIT;
-  const always = variants.slice(0, VARIANTS_LIMIT);
+  const visible = variants.slice(0, VARIANTS_LIMIT);
   const extra = variants.slice(VARIANTS_LIMIT);
 
   return (
-    <div className="my-2 flex flex-col gap-1.5">
-      <div className="flex items-start gap-2 capitalize flex-wrap">
-        {always.map((variant, index) => (
-          <span key={`${dishName}-always-${index}`} className={variantPillClass}>
+    <div className="mt-1.5 flex flex-col gap-1">
+      <div className="flex flex-wrap items-center gap-1.5 capitalize">
+        <span className="inline-flex items-center text-primary/75" aria-label="Variantes">
+          <Tags size={12} strokeWidth={2} />
+        </span>
+        {visible.map((variant, index) => (
+          <span key={`${dishName}-visible-${index}`} className={variantPillClass}>
             {variant}
           </span>
         ))}
 
         {hasMore && (
-          <details className="group/details">
-            <summary className="list-none text-xs text-primary border border-primary/40 bg-primary/10 hover:bg-primary hover:text-primary-foreground px-2 py-0.5 rounded-full transition-colors duration-300 cursor-pointer">
-              <span className="group-open/details:hidden">+{extra.length} mas</span>
-              <span className="hidden group-open/details:inline">Ver menos</span>
+          <details className="group/details contents">
+            <summary className="list-none rounded-full border border-dashed border-primary/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-primary cursor-pointer">
+              <span className="group-open/details:hidden">+{extra.length}</span>
+              <span className="hidden group-open/details:inline">menos</span>
             </summary>
 
-            <div className="mt-2 flex flex-wrap gap-2 capitalize">
-              {extra.map((variant, index) => (
-                <span
-                  key={`${dishName}-extra-${index}`}
-                  className={variantPillClass}
-                >
-                  {variant}
-                </span>
-              ))}
+            <div className="basis-full grid grid-rows-[0fr] transition-[grid-template-rows,opacity,margin] duration-200 ease-out opacity-0 motion-reduce:transition-none group-open/details:mt-1 group-open/details:grid-rows-[1fr] group-open/details:opacity-100">
+              <div className="overflow-hidden">
+                <div className="flex flex-wrap gap-1.5 capitalize pt-0.5">
+                  {extra.map((variant, index) => (
+                    <span key={`${dishName}-extra-${index}`} className={variantPillClass}>
+                      {variant}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </details>
         )}
@@ -94,7 +99,7 @@ function DishCard({ dish }: { dish: Dish }) {
           {dish.variants && (
             <VariantList dishName={dish.name} variants={dish.variants} />
           )}
-          <p className="text-sm text-muted-foreground my-0.5 leading-relaxed">
+          <p className="my-0.5 text-sm leading-relaxed text-muted-foreground">
             {dish.description}
           </p>
         </div>
