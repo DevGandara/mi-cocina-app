@@ -10,9 +10,9 @@ const KidsMenuAddOn = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div className="w-full">
       {/* Encabezado */}
-      <div className="mb-8 flex w-full max-w-3xl items-start gap-3 sm:items-center">
+      <div className="mb-8 flex w-full items-start gap-3 sm:items-center">
         <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
           <Baby size={20} />
         </span>
@@ -26,14 +26,14 @@ const KidsMenuAddOn = () => {
         </div>
       </div>
 
-        <Card
-          className="relative overflow-hidden
-        bg-background border border-border/40
-        w-full max-w-3xl p-6 sm:p-8 rounded-3xl
-        shadow-sm hover:shadow-xl hover:shadow-primary/8
-        transition-all duration-500 group
-        hover:-translate-y-2 flex flex-col justify-between gap-4"
-        >
+      <Card
+        className="relative overflow-hidden
+         bg-background border border-border/40
+         w-full p-6 sm:p-8 rounded-3xl
+         shadow-sm hover:shadow-xl hover:shadow-primary/8
+         transition-all duration-500 group
+         hover:-translate-y-2 flex flex-col justify-between gap-4"
+      >
         {/* Línea decorativa superior */}
         <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
         {/* Gradiente hover */}

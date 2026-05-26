@@ -1,3 +1,4 @@
+import { canapesCategory } from "./menu-data/canapes";
 import { desayunosCategory } from "./menu-data/desayunos";
 import { especialCategory } from "./menu-data/especial";
 import { internacionalCategory } from "./menu-data/internacional";
@@ -48,6 +49,7 @@ export const menuCategories = [
   platillosCategory,
   especialCategory,
   desayunosCategory,
+  canapesCategory,
   postresCategory,
 ] as const satisfies readonly MenuCategory[];
 

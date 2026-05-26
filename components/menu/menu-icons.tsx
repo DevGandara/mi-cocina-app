@@ -5,6 +5,7 @@ import {
   HandPlatter,
   Sparkles,
   Sun,
+  Sandwich,
 } from "lucide-react";
 import type { MenuIconKey } from "@/lib/constants/menu";
 
@@ -21,6 +22,7 @@ const iconMap = {
   sparkles: Sparkles,
   sun: Sun,
   "cake-slice": CakeSlice,
+  sandwich: Sandwich,
 } as const;
 
 export function MenuCategoryIcon({

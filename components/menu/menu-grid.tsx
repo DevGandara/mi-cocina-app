@@ -18,7 +18,13 @@ const VARIANTS_LIMIT = 3;
 const variantPillClass =
   "inline-flex items-center rounded-full border border-primary/15 bg-primary/6 px-1.5 py-0.5 text-[10px] font-medium tracking-[0.08em] text-foreground/70 uppercase";
 
-function VariantList({ dishName, variants }: { dishName: string; variants: string[] }) {
+function VariantList({
+  dishName,
+  variants,
+}: {
+  dishName: string;
+  variants: string[];
+}) {
   const hasMore = variants.length > VARIANTS_LIMIT;
   const visible = variants.slice(0, VARIANTS_LIMIT);
   const extra = variants.slice(VARIANTS_LIMIT);
@@ -26,18 +32,24 @@ function VariantList({ dishName, variants }: { dishName: string; variants: strin
   return (
     <div className="mt-1.5 flex flex-col gap-1">
       <div className="flex flex-wrap items-center gap-1.5 capitalize">
-        <span className="inline-flex items-center text-primary/75" aria-label="Variantes">
+        <span
+          className="inline-flex items-center text-primary/75"
+          aria-label="Variantes"
+        >
           <Tags size={12} strokeWidth={2} />
         </span>
         {visible.map((variant, index) => (
-          <span key={`${dishName}-visible-${index}`} className={variantPillClass}>
+          <span
+            key={`${dishName}-visible-${index}`}
+            className={variantPillClass}
+          >
             {variant}
           </span>
         ))}
 
         {hasMore && (
           <details className="group/details contents">
-            <summary className="list-none rounded-full border border-dashed border-primary/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-primary cursor-pointer">
+            <summary className="list-none rounded-full border border-dashed border-primary/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-primary cursor-pointer">
               <span className="group-open/details:hidden">+{extra.length}</span>
               <span className="hidden group-open/details:inline">menos</span>
             </summary>
@@ -46,7 +58,10 @@ function VariantList({ dishName, variants }: { dishName: string; variants: strin
               <div className="overflow-hidden">
                 <div className="flex flex-wrap gap-1.5 capitalize pt-0.5">
                   {extra.map((variant, index) => (
-                    <span key={`${dishName}-extra-${index}`} className={variantPillClass}>
+                    <span
+                      key={`${dishName}-extra-${index}`}
+                      className={variantPillClass}
+                    >
                       {variant}
                     </span>
                   ))}
@@ -130,10 +145,15 @@ export function MenuGrid({ activeCategory }: MenuGridProps) {
         <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
           Menu <span className="text-primary">{category.label}</span>
         </h2>
-        <p className="text-muted-foreground mt-2">{totalDishes} guisados disponibles</p>
+        <p className="text-muted-foreground mt-2">
+          {totalDishes} guisados disponibles
+        </p>
       </div>
 
-      <div key={activeCategory} className="animate-in fade-in slide-in-from-bottom-4 duration-400">
+      <div
+        key={activeCategory}
+        className="animate-in fade-in slide-in-from-bottom-4 duration-400"
+      >
         {hasMenuSections(category) ? (
           <div className="space-y-12">
             {category.sections.map((section, sectionIndex) => (

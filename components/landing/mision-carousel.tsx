@@ -21,7 +21,7 @@ export function MisionCarousel() {
       ]}
     >
       <CarouselContent className="ml-0 sm:-ml-4">
-        {[1, 2, 3].map((i) => (
+        {[1, 2, 3, 4, 5, 6].map((i) => (
           <CarouselItem key={i} className="basis-full pl-0 sm:pl-4">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl sm:aspect-6/5">
               <Image

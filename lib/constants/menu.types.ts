@@ -16,6 +16,7 @@ export type MenuCategoryId =
   | "platillos"
   | "especial"
   | "desayunos"
+  | "canapes"
   | "postres";
 
 export type MenuIconKey =
@@ -24,6 +25,7 @@ export type MenuIconKey =
   | "hand-platter"
   | "sparkles"
   | "sun"
+  | "sandwich"
   | "cake-slice";
 
 interface BaseMenuCategory {

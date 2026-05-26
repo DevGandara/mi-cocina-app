@@ -45,7 +45,7 @@ const MenuEspecial = ({ type }: MenuEspecialProps) => {
       <CardHeader className="p-0 relative z-10">
         <CardTitle className="text-center text-xl sm:text-2xl">{data.title}</CardTitle>
       </CardHeader>
-      <CardContent className="relative z-10">
+      <CardContent className="relative z-10 p-0">
         <ul className="space-y-1.5 text-sm text-muted-foreground sm:text-base">
           {data.items.map((item) => (
             <li key={item} className="flex items-start gap-2 text-left">
@@ -55,14 +55,14 @@ const MenuEspecial = ({ type }: MenuEspecialProps) => {
           ))}
         </ul>
       </CardContent>
-      <CardFooter className="flex flex-col items-center justify-center gap-3 relative z-10">
+      <CardFooter className="relative z-10 flex flex-col items-center justify-center gap-3 p-0">
         <div className="flex flex-col items-center gap-1">
           <p className="text-primary font-extrabold text-3xl sm:text-4xl">{data.price}</p>
           <span className="text-xs text-muted-foreground">por persona</span>
         </div>
         <Button
           variant="outline"
-          className="mt-1 h-auto w-full rounded-xl px-4 py-3 text-center text-sm leading-snug whitespace-normal cursor-pointer"
+          className="mt-1 h-auto w-full rounded-xl px-4 py-2.5 text-center text-sm leading-snug whitespace-normal cursor-pointer"
         >
           {data.cta}
         </Button>

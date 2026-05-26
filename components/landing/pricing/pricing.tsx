@@ -1,9 +1,13 @@
+import Link from "next/link";
 import { Reveal } from "@/components/landing/reveal";
 import BuffetPricing from "./buffet-pricing";
+import CanapesPricing from "./canapes-pricing";
 import PlatilloPricing from "./platillo-pricing";
 import MenuEspecial from "./menue-pricing";
 import KidsMenuAddOn from "./kids-addon";
-import { UtensilsCrossed, ChefHat, CirclePlus, Egg, Info } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { UtensilsCrossed, ChefHat, CirclePlus, Egg, IceCreamCone, Info, HandPlatter } from "lucide-react";
 
 const pricing = () => {
   return (
@@ -82,11 +86,11 @@ const pricing = () => {
           <div className="h-px bg-border/40" />
 
           {/* Servicio Extra y Desayunos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6  ">
             {/* Servicio Extra */}
-          <Reveal direction="left" delay={80}>
-              <div className="space-y-5">
-                <div className="flex items-start gap-3 text-left sm:items-center mb-8">
+            <Reveal delay={80}>
+              <div className="space-y-3">
+                <div className="mb-5 flex items-start gap-3 text-left sm:items-center">
                   <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
                     <CirclePlus size={20} />
                   </span>
@@ -105,9 +109,9 @@ const pricing = () => {
             </Reveal>
 
             {/* Desayunos */}
-          <Reveal direction="right" delay={140}>
-              <div className="space-y-5">
-                <div className="flex items-start gap-3 text-left sm:items-center mb-8">
+            <Reveal delay={140}>
+              <div className="space-y-3">
+                <div className="mb-5 flex items-start gap-3 text-left sm:items-center">
                   <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
                     <Egg size={20} />
                   </span>
@@ -124,13 +128,92 @@ const pricing = () => {
                 <MenuEspecial type="desayuno" />
               </div>
             </Reveal>
+
           </div>
 
           <div className="h-px bg-border/40" />
 
-          <Reveal delay={120}>
-            <div>
-              <KidsMenuAddOn />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <Reveal delay={120}>
+              <div>
+                <KidsMenuAddOn />
+              </div>
+            </Reveal>
+
+            <Reveal direction="up" delay={160}>
+              <div className="w-full">
+                <div className="mb-8 flex w-full items-start gap-3 sm:items-center">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
+                    <IceCreamCone size={20} />
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                      Menú de Postres
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Opción complementaria para cerrar tu evento con un toque dulce.
+                    </p>
+                  </div>
+                </div>
+
+                <Card
+                  className="relative overflow-hidden
+                    bg-background border border-border/40
+                    w-full p-6 sm:p-8 rounded-3xl
+                    shadow-sm hover:shadow-xl hover:shadow-primary/8
+                    transition-all duration-500 group
+                    hover:-translate-y-2 flex flex-col justify-between gap-4"
+                >
+                  <div className="absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+
+                  <CardHeader className="relative z-10 p-0 text-center">
+                    <CardTitle className="text-2xl">Postres</CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="relative z-10 p-0 text-center">
+                    <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                      Consulta las opciones disponibles para acompanar cualquier paquete
+                      con una seleccion especial de postres.
+                    </p>
+                  </CardContent>
+
+                  <CardFooter className="relative z-10 flex flex-col items-center justify-center gap-3 p-0">
+                    <div className="flex flex-col items-center gap-1">
+                      <p className="text-primary font-extrabold text-3xl sm:text-4xl">
+                        $30.00
+                      </p>
+                      <span className="text-xs text-muted-foreground">por persona</span>
+                    </div>
+
+                    <Button asChild variant="outline" className="mt-1 w-full rounded-xl">
+                      <Link href="/menu?categoria=postres">Ver menú de postres</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="h-px bg-border/40" />
+
+          <Reveal delay={150}>
+            <div className="w-full">
+              <div className="mb-8 flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <HandPlatter size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold leading-tight text-foreground">
+                    Canapés
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Bocadillos ideales para recepciones, cocteles y mesas de bienvenida.
+                  </p>
+                </div>
+              </div>
+
+              <CanapesPricing />
             </div>
           </Reveal>
 
