@@ -12,30 +12,22 @@ import { Check, GlassWater, Heart } from "lucide-react";
 const canapesOptions = [
   {
     title: "Canapés Surtidos",
-    description: [
-      "Selección de bocados fríos y calientes",
-      "Presentación ideal para reuniones familiares",
-      "Opciones prácticas para servicio continuo",
-    ],
+    description: ["4 canapés por persona"],
     price: "$60.00",
     popular: false,
   },
   {
     title: "Canapés Gourmet ",
-    description: [
-      "Sabores más elegantes y presentación especial",
-      "Perfectos para recepciones y eventos formales",
-      "Combinaciones premium para mesas de coctel",
-    ],
+    description: ["5 canapés por persona"],
     price: "$70.00",
     popular: false,
   },
   {
     title: "Canapés Gourmet con Vajilla",
     description: [
-      "Alternativa para mesas variadas",
-      "Ideal para complementar postres o coffee break",
-      "Selección pensada para un cierre ligero",
+      "5 canapés por persona",
+      "Incluye vajilla",
+      "Incluye servilleta",
     ],
     price: "$80.00",
     popular: true,
@@ -74,7 +66,7 @@ export default function CanapesPricing() {
             <CardContent className="relative z-10 p-0">
               <ul className="space-y-1.5 text-left text-sm text-muted-foreground sm:text-base">
                 {option.description.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
+                  <li key={item} className="flex items-center gap-2">
                     <Check className="shrink-0 text-primary" size={16} />
                     {item}
                   </li>
@@ -87,10 +79,16 @@ export default function CanapesPricing() {
                 <p className="text-3xl font-extrabold text-primary sm:text-4xl">
                   {option.price}
                 </p>
-                <span className="text-xs text-muted-foreground">por persona</span>
+                <span className="text-xs text-muted-foreground">
+                  por persona
+                </span>
               </div>
 
-              <Button asChild variant={option.popular ? "default" : "outline"} className="mt-1 w-full rounded-xl">
+              <Button
+                asChild
+                variant={option.popular ? "default" : "outline"}
+                className="mt-1 w-full rounded-xl"
+              >
                 <Link href="/menu?categoria=canapes">Ver menú de canapés</Link>
               </Button>
             </CardFooter>
@@ -109,7 +107,8 @@ export default function CanapesPricing() {
                 Servicio adicional opcional: vino rosado con copas
               </p>
               <p className="text-sm text-muted-foreground">
-                Disponible como complemento para quienes deseen acompanar su mesa de canapés.
+                Disponible como complemento para quienes deseen acompañar su
+                mesa de canapés.
               </p>
             </div>
           </div>

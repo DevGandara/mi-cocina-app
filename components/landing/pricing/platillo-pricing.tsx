@@ -105,7 +105,7 @@ const platillo = () => {
           <CardContent className="relative z-10">
             <ul className="space-y-1.5 text-sm text-muted-foreground sm:text-base">
               {platillo.description.map((item, index) => (
-                <li key={index} className="flex items-start gap-2 text-left">
+                <li key={index} className="flex items-center gap-2 text-left">
                   <Check className="text-primary shrink-0" size={16} />
                   {item}
                 </li>

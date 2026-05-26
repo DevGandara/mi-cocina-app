@@ -6,8 +6,22 @@ import PlatilloPricing from "./platillo-pricing";
 import MenuEspecial from "./menue-pricing";
 import KidsMenuAddOn from "./kids-addon";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { UtensilsCrossed, ChefHat, CirclePlus, Egg, IceCreamCone, Info, HandPlatter } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  UtensilsCrossed,
+  ChefHat,
+  CirclePlus,
+  Egg,
+  IceCreamCone,
+  Info,
+  HandPlatter,
+} from "lucide-react";
 
 const pricing = () => {
   return (
@@ -33,8 +47,8 @@ const pricing = () => {
           </Reveal>
           <Reveal delay={200}>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Selecciona la modalidad y después elige el menú que mejor se adapte
-              a tu celebración.
+              Selecciona la modalidad y después elige el menú que mejor se
+              adapte a tu celebración.
             </p>
           </Reveal>
         </div>
@@ -43,17 +57,17 @@ const pricing = () => {
           {/* Platillos a la carta */}
           <Reveal delay={60}>
             <div>
-            <div className="flex items-center gap-3 mb-8">
-              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
-                <UtensilsCrossed size={20} />
-              </span>
-              <div>
-                <h3 className="text-xl font-bold text-foreground leading-tight">
-                  Platillos a la carta
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Servicio individual por persona
-                </p>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
+                  <UtensilsCrossed size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground leading-tight">
+                    Platillos a la carta
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Servicio individual por persona
+                  </p>
                 </div>
               </div>
               <PlatilloPricing />
@@ -66,17 +80,17 @@ const pricing = () => {
           {/* Buffet */}
           <Reveal delay={120}>
             <div className="w-full">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
-                <ChefHat size={20} />
-              </span>
-              <div>
-                <h3 className="text-xl font-bold text-foreground leading-tight">
-                  Buffet
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Servicio libre para grupos y eventos
-                </p>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary shrink-0">
+                  <ChefHat size={20} />
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground leading-tight">
+                    Buffet
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Servicio libre para grupos y eventos
+                  </p>
                 </div>
               </div>
               <BuffetPricing />
@@ -99,8 +113,8 @@ const pricing = () => {
                       Servicio Extra
                     </h3>
                     <p className="text-sm leading-relaxed text-muted-foreground">
-                      Recomendado para baby shower, despedida de soltera, canasta,
-                      etc.
+                      Recomendado para baby shower, despedida de soltera,
+                      canasta, etc.
                     </p>
                   </div>
                 </div>
@@ -128,7 +142,6 @@ const pricing = () => {
                 <MenuEspecial type="desayuno" />
               </div>
             </Reveal>
-
           </div>
 
           <div className="h-px bg-border/40" />
@@ -151,7 +164,8 @@ const pricing = () => {
                       Menú de Postres
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Opción complementaria para cerrar tu evento con un toque dulce.
+                      Opción complementaria para cerrar tu evento con un toque
+                      dulce.
                     </p>
                   </div>
                 </div>
@@ -173,8 +187,8 @@ const pricing = () => {
 
                   <CardContent className="relative z-10 p-0 text-center">
                     <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                      Consulta las opciones disponibles para acompanar cualquier paquete
-                      con una seleccion especial de postres.
+                      Consulta las opciones disponibles para acompañar cualquier
+                      paquete con una seleccion especial de postres.
                     </p>
                   </CardContent>
 
@@ -183,11 +197,19 @@ const pricing = () => {
                       <p className="text-primary font-extrabold text-3xl sm:text-4xl">
                         $30.00
                       </p>
-                      <span className="text-xs text-muted-foreground">por persona</span>
+                      <span className="text-xs text-muted-foreground">
+                        por persona
+                      </span>
                     </div>
 
-                    <Button asChild variant="outline" className="mt-1 w-full rounded-xl">
-                      <Link href="/menu?categoria=postres">Ver menú de postres</Link>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="mt-1 w-full rounded-xl"
+                    >
+                      <Link href="/menu?categoria=postres">
+                        Ver menú de postres
+                      </Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -208,7 +230,8 @@ const pricing = () => {
                     Canapés
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Bocadillos ideales para recepciones, cocteles y mesas de bienvenida.
+                    Bocadillos ideales para recepciones, cocteles y mesas de
+                    bienvenida.
                   </p>
                 </div>
               </div>
@@ -234,8 +257,8 @@ const pricing = () => {
                   <li className="flex gap-2">
                     <span className="text-amber-500 mt-0.5 shrink-0">•</span>
                     Los costos antes mencionados son para un mínimo de 50
-                    personas, con una cantidad inferior de comensales, los costos
-                    aumentan a razón de $10.00 por persona.
+                    personas, con una cantidad inferior de comensales, los
+                    costos aumentan a razón de $10.00 por persona.
                   </li>
                   <li className="flex gap-2">
                     <span className="text-amber-500 mt-0.5 shrink-0">•</span>

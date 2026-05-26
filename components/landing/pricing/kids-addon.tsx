@@ -46,7 +46,7 @@ const KidsMenuAddOn = () => {
         <CardContent className="relative z-10 p-0">
           <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
             {items.map((item) => (
-              <li key={item} className="flex items-start gap-2">
+              <li key={item} className="flex items-center gap-2">
                 <Check className="text-primary shrink-0" size={16} />
                 {item}
               </li>
