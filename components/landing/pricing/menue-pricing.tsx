@@ -17,13 +17,13 @@ const menuData = {
     title: "Menú Especial",
     items: ["Plato Fuerte", "Acompañamiento"],
     price: "$90.00",
-    cta: "Solicitar menú de platillos especiales",
+    cta: "Ver menú especial",
   },
   desayuno: {
     title: "Menú Desayuno",
     items: ["Buffet (3 guisados)", "Fruta o jugo", "Pan Dulce", "Café"],
     price: "$100.00",
-    cta: "Solicitar menú de desayunos",
+    cta: "Ver menú de desayunos",
   },
 };
 

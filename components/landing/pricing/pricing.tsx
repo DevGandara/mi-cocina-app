@@ -245,28 +245,28 @@ const pricing = () => {
           <Reveal direction="up" delay={160}>
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-600 shrink-0">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-rose-100 text-rose-600 shrink-0">
                   <Info size={20} />
                 </span>
                 <h3 className="text-xl font-bold text-foreground leading-tight">
                   A considerar
                 </h3>
               </div>
-              <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
-                <ul className="flex flex-col gap-3 text-sm text-amber-900/80">
+              <div className="rounded-2xl border border-rose-200/70 bg-linear-to-r from-rose-50 via-white to-rose-50/80 p-6">
+                <ul className="flex flex-col gap-3 text-sm text-rose-900/80">
                   <li className="flex gap-2">
-                    <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                    <span className="text-rose-500 mt-0.5 shrink-0">•</span>
                     Los costos antes mencionados son para un mínimo de 50
                     personas, con una cantidad inferior de comensales, los
                     costos aumentan a razón de $10.00 por persona.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                    <span className="text-rose-500 mt-0.5 shrink-0">•</span>
                     Se requiere del 50% de anticipo para contratar y el resto el
                     día del evento.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                    <span className="text-rose-500 mt-0.5 shrink-0">•</span>
                     Las cremas tienen costo de $25.00
                   </li>
                 </ul>

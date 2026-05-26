@@ -66,11 +66,11 @@ const pricing = () => {
           )}
 
           <CardHeader className="p-0 relative z-10">
-            <CardTitle className="pr-12 text-center text-xl sm:text-2xl">
+            <CardTitle className="text-center text-xl sm:text-2xl">
               {buffet.title}
             </CardTitle>
           </CardHeader>
-          <CardContent className="relative z-10">
+          <CardContent className="relative z-10 p-0">
             <ul className="space-y-1.5 text-sm text-muted-foreground sm:text-base">
               {buffet.description.map((item, index) => (
                 <li key={index} className="flex items-center gap-2 text-left">
@@ -80,7 +80,7 @@ const pricing = () => {
               ))}
             </ul>
           </CardContent>
-          <CardFooter className="flex flex-col items-center justify-center gap-3 relative z-10">
+          <CardFooter className="relative z-10 flex flex-col items-center justify-center gap-3 p-0">
             <div className="flex flex-col items-center gap-1">
               <p className="text-primary font-extrabold text-3xl sm:text-4xl">
                 {buffet.price}
@@ -89,9 +89,9 @@ const pricing = () => {
             </div>
             <Button
               variant={buffet.popular ? "default" : "outline"}
-              className="w-full mt-1 rounded-xl cursor-pointer"
+              className="mt-1 w-full rounded-xl cursor-pointer"
             >
-              Solicitar menú completo
+              Ver menú de buffet
             </Button>
           </CardFooter>
         </Card>

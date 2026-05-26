@@ -28,7 +28,7 @@ export function MisionCarousel() {
                 src={`/carrousel-${i}.webp`}
                 alt="Servicio de catering"
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 78vw, (max-width: 1280px) 42vw, 34vw"
                 className="object-cover"
               />
             </div>

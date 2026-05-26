@@ -12,18 +12,21 @@ import { Check, GlassWater, Heart } from "lucide-react";
 const canapesOptions = [
   {
     title: "Canapés Surtidos",
+    step: 1,
     description: ["4 canapés por persona"],
     price: "$60.00",
     popular: false,
   },
   {
     title: "Canapés Gourmet ",
+    step: 2,
     description: ["5 canapés por persona"],
     price: "$70.00",
     popular: false,
   },
   {
     title: "Canapés Gourmet con Vajilla",
+    step: 3,
     description: [
       "5 canapés por persona",
       "Incluye vajilla",
@@ -57,8 +60,14 @@ export default function CanapesPricing() {
               </span>
             )}
 
+            <div className="relative z-10 mb-1 flex justify-center">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                {option.step}
+              </span>
+            </div>
+
             <CardHeader className="relative z-10 p-0">
-              <CardTitle className="pr-12 text-center text-xl sm:text-2xl">
+              <CardTitle className=" text-center text-xl sm:text-2xl">
                 {option.title}
               </CardTitle>
             </CardHeader>
@@ -96,26 +105,26 @@ export default function CanapesPricing() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-rose-200/70 bg-linear-to-r from-rose-50 via-white to-rose-50/80 px-5 py-4 shadow-sm">
+      <div className="rounded-2xl border border-amber-200 bg-amber-50/60 px-5 py-4 shadow-sm">
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-600">
+            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600">
               <GlassWater size={18} />
             </span>
             <div>
               <p className="text-sm font-semibold text-foreground">
                 Servicio adicional opcional: vino rosado con copas
               </p>
-              <p className="text-sm text-muted-foreground">
-                Disponible como complemento para quienes deseen acompañar su
-                mesa de canapés.
+              <p className="text-sm text-amber-900/80">
+                Disponible para quienes quieran complementar su mesa de canapés
+                con una experiencia más completa.
               </p>
             </div>
           </div>
 
           <div className="pl-12 md:pl-0 md:text-right">
-            <p className="text-2xl font-extrabold text-rose-600">$30.00</p>
-            <span className="text-xs text-muted-foreground">por persona</span>
+            <p className="text-2xl font-extrabold text-amber-600">$30.00</p>
+            <span className="text-xs text-amber-900/70">por persona</span>
           </div>
         </div>
       </div>
