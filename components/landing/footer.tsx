@@ -57,9 +57,9 @@ export const Footer = () => {
           <div className="mx-5 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent sm:mx-6 md:mx-10" />
 
           {/* ── Main content: 3-column on desktop ── */}
-          <div className="grid grid-cols-1 items-start gap-8 px-5 py-8 sm:px-6 md:grid-cols-3 md:gap-6 md:px-10 md:py-10 lg:gap-10">
+          <div className="grid grid-cols-1 items-start gap-8 px-5 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:gap-10 lg:px-10 lg:py-10">
             {/* Column 1 — Map + Address */}
-            <div className="space-y-3">
+            <div className="space-y-3 sm:col-span-2 lg:col-span-1">
               <h3 className="flex items-center gap-2 text-green-600/70">
                 <MapPin className="size-3.5" />
                 <span className="text-[11px] tracking-[0.2em] uppercase font-medium">
@@ -122,7 +122,7 @@ export const Footer = () => {
             </div>
 
             {/* Column 3 — Nav + Schedule */}
-            <div className="space-y-6">
+            <div className="space-y-6 sm:col-span-2 lg:col-span-1">
               <div className="space-y-3">
                 <h3 className="flex items-center gap-2 text-green-600/70">
                   <ChevronRight className="size-3.5" />

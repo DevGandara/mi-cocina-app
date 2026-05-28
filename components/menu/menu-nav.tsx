@@ -11,10 +11,9 @@ interface MenuNavProps {
 
 export function MenuNav({ activeCategory }: MenuNavProps) {
   return (
-    <div className="sticky top-16 md:top-32 z-40 w-full py-4 flex justify-center px-4">
+    <div className="sticky top-16 z-40 flex w-full justify-center px-4 py-3 md:top-32 md:py-4">
       <nav
-        className="flex gap-1.5 overflow-x-auto scrollbar-hide snap-x snap-mandatory
-                   px-3 py-2 rounded-full border border-white/20 bg-white/55 backdrop-blur-md shadow-lg shadow-black/10"
+        className="scrollbar-hide flex w-full max-w-full gap-1.5 overflow-x-auto snap-x snap-mandatory rounded-full border border-white/20 bg-white/55 px-2 py-2 backdrop-blur-md shadow-lg shadow-black/10 sm:w-auto sm:px-3"
         aria-label="Categorias del menu"
       >
         {menuCategorySummaries.map((category) => {
@@ -26,9 +25,9 @@ export function MenuNav({ activeCategory }: MenuNavProps) {
               href={`/menu?categoria=${category.id}`}
               aria-current={isActive ? "page" : undefined}
               className={`
-                flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+                flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium
                 whitespace-nowrap snap-start transition-all duration-300 cursor-pointer
-                shrink-0
+                shrink-0 sm:px-4
                 ${
                   isActive
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-105"

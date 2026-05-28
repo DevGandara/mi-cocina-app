@@ -25,10 +25,10 @@ import {
 
 const pricing = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8" id="paquetes">
+    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8" id="paquetes">
       <div className="max-w-7xl mx-auto">
         {/* Encabezado principal */}
-        <div className="text-center mb-16">
+        <div className="mb-14 text-center sm:mb-16">
           {/* Eyebrow label */}
           <Reveal delay={40} className="flex justify-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide uppercase mb-4">
@@ -37,7 +37,7 @@ const pricing = () => {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
+            <h2 className="mb-4 text-3xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-4xl md:text-5xl">
               <span className="text-primary relative inline-block">
                 Paquetes
                 <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-primary/30 rounded-full" />
@@ -221,7 +221,7 @@ const pricing = () => {
 
           <Reveal delay={150}>
             <div className="w-full">
-              <div className="mb-8 flex items-center gap-3">
+                <div className="mb-8 flex items-start gap-3 sm:items-center">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <HandPlatter size={20} />
                 </span>
