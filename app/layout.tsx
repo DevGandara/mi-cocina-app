@@ -73,6 +73,38 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": hasPublicSiteUrl ? `${getSiteUrl("/")}#localbusiness` : undefined,
+  name: siteConfig.name,
+  legalName: siteConfig.legalName,
+  description: siteConfig.description,
+  url: hasPublicSiteUrl ? getSiteUrl("/") : undefined,
+  image: hasPublicSiteUrl ? getSiteUrl(siteConfig.ogImage) : undefined,
+  logo: hasPublicSiteUrl ? getSiteUrl(siteConfig.ogImage) : undefined,
+  telephone: siteConfig.phone,
+  priceRange: siteConfig.priceRange,
+  areaServed: "Aguascalientes, Mexico",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: siteConfig.addressLocality,
+    addressRegion: siteConfig.addressRegion,
+    addressCountry: siteConfig.addressCountry,
+  },
+  openingHoursSpecification: siteConfig.openingHoursSpecification.map((schedule) => ({
+    "@type": "OpeningHoursSpecification",
+    ...schedule,
+  })),
+  sameAs: siteConfig.sameAs,
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: siteConfig.phone,
+    availableLanguage: ["es", "en"],
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -83,6 +115,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
         <Navbar />
         {children}
       </body>
