@@ -105,10 +105,10 @@ export default function CanapesPricing() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-rose-200/70 bg-linear-to-r from-rose-50 via-white to-rose-50/80 px-5 py-4 shadow-sm">
+      <div className="rounded-2xl border border-pink-200/80 bg-linear-to-r from-pink-50 via-rose-50/70 to-pink-100/70 px-5 py-4 shadow-sm">
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-600">
+            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-500">
               <GlassWater size={18} />
             </span>
             <div>
@@ -123,7 +123,7 @@ export default function CanapesPricing() {
           </div>
 
           <div className="pl-12 md:pl-0 md:text-right">
-            <p className="text-2xl font-extrabold text-rose-600">$30.00</p>
+            <p className="text-2xl font-extrabold text-pink-500">$30.00</p>
             <span className="text-xs text-muted-foreground">por persona</span>
           </div>
         </div>
