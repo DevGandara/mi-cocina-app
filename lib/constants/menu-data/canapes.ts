@@ -8,19 +8,19 @@ export const canapesCategory = createDishListCategory({
     {
       name: "Banderilla de Carnes Frias",
       description:
-        "Chorizo, salchicha, queso manchego, pimiento morrón y aceituna verde montados en brocheta para un bocado ligero y elegante.",
+        "Jamón, salchicha, queso manchego, jitomate cherry y aceituna verde montados en brocheta para un bocado ligero y elegante.",
       image: "/menu/canapes/brochetacarne.webp"
     },
     {
       name: "Banderilla de Frutas",
       description:
-        "Fresas, melón, uvas y piña montadas en brocheta para un bocado ligero y elegante.",
+        "Fresas, melón, uvas y piña montadas en brocheta para un toque dulce.",
       image: "/menu/canapes/brochetafrutas.webp"
     },
     {
       name: "Croissant de Jamón y Queso",
       description:
-        "Suave croissant relleno de jamón y queso gouda derretido, ideal para acompañar cualquier platillo.",
+        "Suave croissant relleno de jamón, queso gouda derretido y lechuga italiana, ideal para acompañar cualquier platillo.",
       image: "/menu/canapes/croissant.webp"
     },
     {

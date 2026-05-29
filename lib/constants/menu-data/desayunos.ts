@@ -41,7 +41,7 @@ export const desayunosCategory = createDishListCategory({
       name: "Cerdo en Salsa",
       description:
         "Trozos seleccionados de cerdo cocinados en salsas de chiles auténticos que le aportan carácter y profundidad. A gusto del comensal.",
-      variants: ["verde", "roja", "martajada"],
+      variants: ["verde", "roja", "martajada", "pasilla"],
       image: "/menu/desayunos/cerdo.webp",
     },
     {
@@ -60,14 +60,14 @@ export const desayunosCategory = createDishListCategory({
       name: "Rajas Poblanas",
       description:
         "Chile poblano tatemado y cortado en tiras suaves, combinado con ingredientes que resaltan su sabor ahumado y ligeramente picante.",
-      variants: ["con queso", "con crema", "con elote", "con papas"],
+      variants: ["con queso", "con crema", "con elote", "con papas", "a la mexicana"],
       image: "/menu/desayunos/rajas.webp",
     },
     {
       name: "Papas al Gusto",
       description:
         "Papas en trozos bien cocidos y perfectamente sazonados, transformados según el ingrediente que elijas. Un clásico que nunca cansa.",
-      variants: ["con jamón", "con chorizo", "con crema", "a la mexicana"],
+      variants: ["con jamón", "con chorizo", "con crema", "a la mexicana", "adobadas"],
       image: "/menu/desayunos/papas.webp",
     },
     {
@@ -79,12 +79,12 @@ export const desayunosCategory = createDishListCategory({
     {
       name: "Pollo en Salsa",
       description:
-        "Piezas de pollo tiernas y jugosas vestidas con una salsa intensa que llena el plato de aroma y color desde la primera cucharada.",
-      variants: ["salsa verde", "chipotle"],
+        "Pollo deshebrado con una salsa que lo impregna por completo, llenando el plato de aroma y color desde la primera cucharada.",
+      variants: ["salsa verde", "chipotle", "al pimiento"],
       image: "/menu/desayunos/pollo.webp"
     }, {
       name: "Tamal de Espinaca, Queso y Elote",
-      description: "Un tamal hecho con masa de maíz y relleno de espinaca, queso y elote.",
+      description: "Un tamal hecho con masa de maíz y relleno de espinaca, queso y elote, bañado en una salsa verde con crema.",
       image: "/menu/desayunos/tamal.webp"
     }
   ],
