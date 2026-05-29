@@ -11,8 +11,8 @@ export const especialCategory = createSectionedCategory({
         {
           name: "Lasagna",
           description:
-            "Láminas de pasta intercaladas con una rica salsa boloñesa y bechamel, terminadas con una capa de queso gratinado.",
-          variants: ["res", "verduras", "espinacas y champiñones"],
+            "Láminas de pasta intercaladas con una rica salsa boloñesa y bechamel, terminadas con una capa de crema y queso gratinado.",
+          variants: ["res", "poblana", "verduras", "espinacas y champiñones"],
           image: "/menu/internacional/lasagna.webp",
         },
         {
@@ -30,6 +30,7 @@ export const especialCategory = createSectionedCategory({
             "champiñones",
             "espinacas",
             "tres quesos",
+            "poblana"
           ],
           image: "/menu/internacional/crepas.webp",
         },
@@ -48,19 +49,20 @@ export const especialCategory = createSectionedCategory({
         {
           name: "Empanadas Rellenas",
           description:
-            "Masa frita o al horno con rellenos a elegir como champiñones, rajas, pollo, atún o variedades dulces.",
+            "Masa horneada con rellenos a elegir, dándole un sabor único y delicioso.",
+          variants: ["champiñones", "rajas", "pollo", "atún", "dulces", "carne"],
           image: "/menu/especial/empanada.webp",
         },
         {
           name: "Chiles en Nogada",
           description:
-            "Platillo barroco de chile poblano relleno de picadillo de frutas, bañado en crema de nuez de Castilla y granada.",
+            "Platillo barroco de chile poblano relleno de picadillo de carne molida con frutas, bañado en crema de nuez de Castilla y granada.",
           image: "/menu/especial/chilenogada.webp",
         },
         {
           name: "Tamachile",
           description:
-            "Chile relleno de masa de tamal con cochinita pibil bañado en salsa de jitomate y cebolla morada.",
+            "Chile relleno de masa de tamal con cochinita pibil bañado en salsa de jitomate y cebolla morada con un toque de habanero.",
           image: "/menu/especial/tamachile.webp",
         },
       ],
@@ -71,13 +73,13 @@ export const especialCategory = createSectionedCategory({
         {
           name: "Ensalada de Espinaca con Fresa",
           description:
-            "Hojas de espinaca fresca combinadas con la dulzura de la fresa, creando un contraste ligero y refrescante.",
+            "Hojas de espinaca fresca combinadas con la dulzura de la fresa incluyendo trozos de queso panela, con un aderezo de frutos rojos creando un contraste ligero y refrescante.",
           image: "/menu/especial/fresaespinaca.webp",
         },
         {
           name: "Ensalada de Manzanas Rojas",
           description:
-            "Combinación clásica de manzanas rojas con un aderezo cremoso, perfecta para equilibrar platos fuertes.",
+            "Combinación clásica de manzanas rojas con uva y almendra con un aderezo cremoso, servidas en una cama de lechuga, perfecta para equilibrar platos fuertes.",
           image: "/menu/especial/emanzanaroja.webp",
         },
         {
@@ -107,7 +109,7 @@ export const especialCategory = createSectionedCategory({
         {
           name: "Ensalada Verde (Cesar)",
           description:
-            "Hojas de lechuga orejona con aderezo César, crutones y queso, un clásico indispensable y balanceado.",
+            "Hojas de lechuga orejona con aderezo César, crutones y queso parmesano, un clásico indispensable y balanceado.",
           image: "/menu/especial/ecaesar.webp",
         },
         {
@@ -119,7 +121,8 @@ export const especialCategory = createSectionedCategory({
         {
           name: "Arroz",
           description:
-            "Arroz blanco o rojo cocido a la perfección, el acompañamiento tradicional ideal para cualquier guiso del menú.",
+            "Arroz cocido a la perfección, el acompañamiento tradicional ideal para cualquier guiso del menú.",
+          variants: ["blanco", "rojo", "cilantro"],
           image: "/menu/mexicano/arroz.webp",
         },
       ],
