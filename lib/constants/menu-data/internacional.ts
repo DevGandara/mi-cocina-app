@@ -11,7 +11,7 @@ export const internacionalCategory = createSectionedCategory({
         {
           name: "Pollo",
           description:
-            "Tiras de pechuga cocinadas con técnica y criterio, adaptadas a cualquier perfil de sabor que desees. Suave o con carácter, siempre jugoso y bien sazonado.",
+            "Pollo deshebrado cocinado con técnica y criterio, adaptadas a cualquier perfil de sabor que desees. Suave o con carácter, siempre jugoso y bien sazonado.",
           variants: [
             "rajas",
             "crema",
@@ -31,6 +31,7 @@ export const internacionalCategory = createSectionedCategory({
             "poblanas",
             "tres quesos",
             "empanizado",
+            "salsa frutal",
             "champiñon y tocino",
           ],
           image: "/menu/internacional/pechugas.webp",
@@ -60,7 +61,7 @@ export const internacionalCategory = createSectionedCategory({
           name: "Lasagna",
           description:
             "Capas de pasta artesanal que abrazan una generosa boloñesa y una mezcla de quesos que se funden al horno. Reconfortante y saciante en cada porción.",
-          variants: ["res", "verduras", "espinacas y champiñones"],
+          variants: ["res","pollo", "verduras", "espinacas y champiñones"],
           image: "/menu/internacional/lasagna.webp",
         },
         {
@@ -73,7 +74,8 @@ export const internacionalCategory = createSectionedCategory({
         {
           name: "Pastel Azteca",
           description:
-            "Una lasagna mexicana: capas de tortilla con pollo deshebrado, salsa y queso gratinado al horno. Crujiente por fuera, jugoso y fundido por dentro.",
+            "Una lasagna mexicana: capas de carne deliciosa, salsa, verduras, queso y crema gratinado al horno. Crujiente por fuera, jugoso y fundido por dentro.",
+          variants: ["res","pollo"],
           image: "/menu/internacional/pastelazteca.webp",
         },
         {
@@ -148,7 +150,7 @@ export const internacionalCategory = createSectionedCategory({
           name: "Papas",
           description:
             "Papa perfectamente cocida, lista para tomar la forma que prefieras. Un acompañamiento clásico con opciones que van de lo rústico a lo elegante.",
-          variants: ["con crema", "al gratín", "al ajillo", "en puré"],
+          variants: ["con crema", "al gratín", "al ajillo", "en puré", "al limón"],
           image: "/menu/internacional/papas.webp",
         },
         {
@@ -162,7 +164,11 @@ export const internacionalCategory = createSectionedCategory({
             "tres quesos",
           ],
           image: "/menu/internacional/crepas.webp",
-        },
+        },{
+          name: "Verduras al Vapor",
+          description: "Verduras perfectamente cocidas al vapor, listas para acompañar cualquier plato fuerte, salteadas en una pizca de mantequilla.",
+          image: "/menu/platillos/verdurasvapor.webp",
+        }
       ],
     },
   ],
