@@ -58,6 +58,7 @@ export const postresCategory = createDishListCategory({
       name: "Crepas",
       description:
         "Delgadas y delicadas crepas francesas preparadas al momento, dobladas en abanico y acompañadas de tu selección de cajeta con nuez o queso crema con mermelada.",
+      variants: ["cajeta con nuez", "queso crema con mermelada"],
       image: "/menu/postres/crepas.webp"
     },
   ],
