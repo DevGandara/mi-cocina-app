@@ -16,10 +16,15 @@ export function MenuHeader() {
       </div>
 
       <div className="relative z-10 mt-8 px-4 py-20 text-center sm:py-24 md:py-32">
-        <div className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1 backdrop-blur-md sm:mb-6">
-          <span className="text-sm text-white/80 tracking-widest uppercase font-medium">
-            Mi Cocina
-          </span>
+        <div className="mb-6 inline-flex rounded-[2rem] border border-white/12 bg-white/6 px-6 py-4 shadow-lg shadow-black/10 backdrop-blur-sm sm:mb-8 sm:px-7">
+          <Image
+            src="/mi-cocina-logo.webp"
+            alt="Logo de Mi Cocina"
+            width={220}
+            height={74}
+            className="h-16 w-auto object-contain sm:h-20 md:h-24"
+            priority
+          />
         </div>
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-white drop-shadow-lg sm:text-4xl md:text-6xl lg:text-7xl">
           Nuestros{" "}
