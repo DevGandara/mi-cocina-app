@@ -29,7 +29,7 @@ export const platillosCategory = createSectionedCategory({
         {
           name: "Pechugas de Pollo",
           description:
-            "Pechuga entera, jugosa y bien sazonada, llevada a su máximo potencial con rellenos y preparaciones que la convierten en el plato fuerte de cualquier celebración.",
+            "Pechuga fileteada, jugosa y bien sazonada, llevada a su máximo potencial con rellenos y preparaciones que la convierten en el plato fuerte de cualquier celebración.",
           variants: [
             "corden bleu",
             "tres quesos",
@@ -45,7 +45,7 @@ export const platillosCategory = createSectionedCategory({
           name: "Lasagna",
           description:
             "El clásico italiano con sello propio: capas de pasta, carne sazonada y generosa mezcla de quesos fundidos al horno hasta lograr esa corteza dorada perfecta.",
-          variants: ["res", "verduras", "espinacas y champiñones"],
+          variants: ["res", "pollo", "verduras", "espinacas y champiñones", "rajas y elote"],
           image: "/menu/internacional/lasagna.webp",
         },
       ],
@@ -56,8 +56,8 @@ export const platillosCategory = createSectionedCategory({
         {
           name: "Papas",
           description:
-            "Tiernos cortes de papa preparados al gusto: gratinados con queso, salteados a la mantequilla o con un toque cítrico de limón.",
-          variants: ["gratinadas", "a la crema"],
+            "Tiernos cortes de papa preparados al gusto: gratinados con queso, salteados a la mantequilla, con un toque cítrico de limón y entre otras variantes.",
+          variants: ["gratinadas", "a la crema", "al ajillo", "al limon"],
           image: "/menu/platillos/papasgratin.webp",
         },
         {
@@ -108,6 +108,11 @@ export const platillosCategory = createSectionedCategory({
           description:
             "Generosa porción de arroz esponjoso, servido de forma estética para acompañar y realzar el sabor de cualquier plato fuerte.",
           image: "/menu/platillos/montanaarroz.webp",
+        },
+        {
+          name: "Esparragos Salteados",
+          description: "Esparragos frescos salteados con mantequilla y ajo, preparados con la sazón de la casa.",
+          image: "/menu/platillos/esparragossal.webp",
         },
       ],
     },
@@ -206,7 +211,7 @@ export const platillosCategory = createSectionedCategory({
         {
           name: "Crema Verde",
           description:
-            "Elaborada con una variedad de vegetales verdes como chayote y hierbas frescas; con un toque de elote a su sabor",
+            "Elaborada con una variedad de vegetales verdes como chayote y hierbas frescas; con un toque de elote y jamón a su sabor",
           image: "/menu/platillos/cverde.webp",
         },
         {
