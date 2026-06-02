@@ -9,9 +9,10 @@ export const mexicanoCategory = createSectionedCategory({
       title: "Carne",
       dishes: [
         {
-          name: "Alambre de la Parilla",
+          name: "Alambre",
           description:
-            "Jugosa combinación de carnes y vegetales con un irresistible toque ahumado al estilo norteño; perfecta para enrollar en tortillas recién hechas y compartir en buena compañía.",
+            "Jugosa combinación de carnes y vegetales con un irresistible toque ahumado; perfecta para enrollar en tortillas recién hechas y compartir en buena compañía.",
+          variants: ["res", "pollo"],
           image: "/menu/mexicano/alambre.webp",
         },
         {
@@ -21,7 +22,7 @@ export const mexicanoCategory = createSectionedCategory({
           image: "/menu/mexicano/discada.webp",
         },
         {
-          name: "Bistek a la Mexicana",
+          name: "Bistek Guisados",
           description:
             "Finas láminas de res cocinadas en su propio jugo, llenas de sabor y color. Elige la versión que más te apetezca para hacer de cada taco algo especial.",
           variants: ["champiñones", "salsa roja", "salsa verde"],
@@ -38,7 +39,7 @@ export const mexicanoCategory = createSectionedCategory({
           name: "Carne de Puerco en Chile",
           description:
             "Trozos de cerdo tiernos y jugosos, cocidos a fuego lento hasta que la salsa de chile los envuelve por completo. Un guiso de alma y carácter.",
-          variants: ["chile pasilla", "chile chipotle", "chile rojo"],
+          variants: ["chile pasilla", "chile chipotle", "chile rojo", "chile serrano"],
           image: "/menu/mexicano/cerdochile.webp",
         },
         {
@@ -57,21 +58,21 @@ export const mexicanoCategory = createSectionedCategory({
           name: "Costilla de Cerdo con Nopales",
           description:
             "Costillas jugosas guisadas con tiernos nopales de la huerta, en una salsa que reúne lo mejor de la cocina de rancho. Un clásico que nunca falla.",
-          variants: ["salsa verde", "salsa roja"],
+          variants: ["salsa verde", "salsa roja", "salsa martajada"],
           image: "/menu/mexicano/costillacm.webp",
         },
         {
           name: "Carne Deshebrada",
           description:
             "Res finamente deshebrada y sazonada hasta el último hilo. Cada variante le da un carácter distinto; elige la que mejor va con tu ánimo del día.",
-          variants: ["rajas de poblano", "papas", "salsa chipotle"],
+          variants: ["rajas de poblano", "papas", "salsa chipotle", "salpicón", "al pimiento"],
           image: "/menu/mexicano/carnedeshebrada.webp",
         },
         {
           name: "Lomo de Cerdo",
           description:
             "Corte selecto de lomo tierno, cocinado al punto exacto y bañado en la salsa que prefieras. Un plato delicado que cambia de carácter con cada elección.",
-          variants: ["salsa verde", "salsa roja", "crema", "adobo"],
+          variants: ["salsa verde", "salsa roja", "crema", "adobo", "poblano"],
           image: "/menu/mexicano/lomocerdo.webp",
         },
         {
@@ -83,15 +84,15 @@ export const mexicanoCategory = createSectionedCategory({
         {
           name: "Mole a Gusto",
           description:
-            "La joya de la gastronomía mexicana. El Mole Poblano envuelve con su complejidad dulce y especiada; el Mole Verde sorprende con su frescura aromática. Elige tu favorito.",
-          variants: ["mole poblano", "mole verde"],
+            "La joya de la gastronomía mexicana. El Mole envuelve con su complejidad dulce y especiada; y sorprende con su frescura aromática. Elige tu favorito.",
+          variants: ["mole poblano", "mole verde", "mole ranchero"],
           image: "/menu/mexicano/mole.webp",
         },
         {
           name: "Pollo Deshebrado",
           description:
             "Pollo tierno y deshebrado que se presta a mil sabores. Cada variante lo transforma por completo — ligero cuando lo quier, contundente cuando lo necesitas.",
-          variants: ["salsa verde", "adobo rojo", "crema", "pimiento morrón"],
+          variants: ["salsa verde", "adobo rojo", "crema", "pimiento morrón", "con rajas", "a la mexicana"],
           image: "/menu/mexicano/pollodeshebrado.webp",
         },
         {
@@ -136,7 +137,7 @@ export const mexicanoCategory = createSectionedCategory({
           name: "Papas al Estilo de Chef",
           description:
             "Dados de papa dorados hasta lograr ese exterior crujiente que contrasta con su interior esponjoso. Una guarnición que nunca decepciona, sin importar la versión que elijas.",
-          variants: ["con chorizo", "con jamón", "con crema", "mexicana"],
+          variants: ["con chorizo", "con jamón", "con crema", "mexicana", "con rajas"],
           image: "/menu/mexicano/papasm.webp",
         },
         {
