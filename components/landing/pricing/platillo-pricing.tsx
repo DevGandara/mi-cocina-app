@@ -7,6 +7,7 @@ import {
 } from "../../ui/card";
 import { Button } from "../../ui/button";
 import { Check, Heart, Crown } from "lucide-react";
+import Link from "next/link";
 
 const platillos = [
   {
@@ -112,12 +113,14 @@ const platillo = () => {
               </p>
               <span className="text-xs text-muted-foreground">por persona</span>
             </div>
-            <Button
-              variant={platillo.popular ? "default" : "outline"}
-              className="mt-1 w-full rounded-xl cursor-pointer"
-            >
-              Ver menú de platillos
-            </Button>
+            <Link href="/menu?categoria=platillos" className="w-full">
+              <Button
+                variant={platillo.popular ? "default" : "outline"}
+                className="mt-1 w-full rounded-xl cursor-pointer"
+              >
+                Ver menú de platillos
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
       ))}

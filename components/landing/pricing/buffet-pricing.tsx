@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Heart } from "lucide-react";
+import Link from "next/link";
 
 const buffets = [
   {
@@ -19,6 +20,7 @@ const buffets = [
     ],
     price: "$105.00",
     popular: false,
+    type: "internacional",
   },
   {
     title: "Buffet Mexicano",
@@ -30,6 +32,7 @@ const buffets = [
     ],
     price: "$105.00",
     popular: true,
+    type: "mexicano",
   },
 ];
 
@@ -87,12 +90,17 @@ const pricing = () => {
               </p>
               <span className="text-xs text-muted-foreground">por persona</span>
             </div>
-            <Button
-              variant={buffet.popular ? "default" : "outline"}
-              className="mt-1 w-full rounded-xl cursor-pointer"
+            <Link
+              href={`/menu?categoria=${buffet.type === "internacional" ? "internacional" : "mexicano"}`}
+              className="w-full"
             >
-              Ver menú de buffet
-            </Button>
+              <Button
+                variant={buffet.popular ? "default" : "outline"}
+                className="mt-1 w-full rounded-xl cursor-pointer"
+              >
+                {`Ver menú ${buffet.type}`}
+              </Button>
+            </Link>
           </CardFooter>
         </Card>
       ))}

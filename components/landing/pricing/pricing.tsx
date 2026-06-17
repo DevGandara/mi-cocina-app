@@ -139,7 +139,7 @@ const pricing = () => {
                     </p>
                   </div>
                 </div>
-                <MenuEspecial type="desayuno" />
+                <MenuEspecial type="desayunos" />
               </div>
             </Reveal>
           </div>

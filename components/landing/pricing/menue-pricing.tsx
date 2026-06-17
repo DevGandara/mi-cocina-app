@@ -7,9 +7,10 @@ import {
   CardFooter,
 } from "../../ui/card";
 import { Button } from "../../ui/button";
+import Link from "next/link";
 
 interface MenuEspecialProps {
-  type: "especial" | "desayuno";
+  type: "especial" | "desayunos";
 }
 
 const menuData = {
@@ -18,12 +19,14 @@ const menuData = {
     items: ["Plato Fuerte", "Acompañamiento"],
     price: "$90.00",
     cta: "Ver menú especial",
+    type: "especial",
   },
-  desayuno: {
+  desayunos: {
     title: "Menú Desayuno",
     items: ["Buffet (3 guisados)", "Fruta o jugo", "Pan Dulce", "Café"],
     price: "$100.00",
     cta: "Ver menú de desayunos",
+    type: "desayunos",
   },
 };
 
@@ -64,12 +67,14 @@ const MenuEspecial = ({ type }: MenuEspecialProps) => {
           </p>
           <span className="text-xs text-muted-foreground">por persona</span>
         </div>
-        <Button
-          variant="outline"
-          className="mt-1 h-auto w-full rounded-xl px-4 py-2.5 text-center text-sm leading-snug whitespace-normal cursor-pointer"
-        >
-          {data.cta}
-        </Button>
+        <Link href={`/menu?categoria=${type}`} className="w-full">
+          <Button
+            variant="outline"
+            className="mt-1 h-auto w-full rounded-xl px-4 py-2 text-center text-sm leading-snug whitespace-normal cursor-pointer"
+          >
+            {data.cta}
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
